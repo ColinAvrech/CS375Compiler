@@ -1,3 +1,17 @@
 *.suo
 *.filters
 *.user
+*.sdf
+*.sln
+*.vcxproj
+CS375_colin.avrech_3/CompilerClassAssignment3/Debug/
+CS375_colin.avrech_3/CompilerClassAssignment3/*.txt
+CS375_colin.avrech_3/Reference/*.txt
+CS375_colin.avrech_3/Submissions.zip
+CS375_colin.avrech_3/Submissions/
+CS375_colin.avrech_4/CompilerClassAssignment4/Debug/
+CS375_colin.avrech_4/CompilerClassAssignment4/*.txt
+CS375_colin.avrech_4/CompilerClassAssignment4/Release/
+CS375_colin.avrech_4/CompilerClassAssignment4/x64/Debug/
+CS375_colin.avrech_4/Reference/*.txt
+CS375_colin.avrech_4/Screenshots/
