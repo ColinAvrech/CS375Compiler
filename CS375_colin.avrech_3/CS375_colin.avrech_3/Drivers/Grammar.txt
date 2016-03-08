@@ -1,0 +1,51 @@
+
+Block               = (Class | Function | Var <Semicolon>)*
+
+Class               = <Class> <Identifier> <OpenCurley> (Var <Semicolon> | Function)* <CloseCurley>
+
+Var                 = <Var> <Identifier> SpecifiedType (<Assignment> Expression)?
+Function            = <Function> <Identifier> <OpenParentheses> (Parameter (<Comma> Parameter)*)? <CloseParentheses> SpecifiedType? Scope
+Parameter           = <Identifier> SpecifiedType
+
+SpecifiedType       = <Colon> Type
+Type                = <Identifier> <Asterisk>*
+
+Scope               = <OpenCurley> (Statement)* <CloseCurley>
+Statement           = FreeStatement | DelimitedStatement <Semicolon>
+
+DelimitedStatement  = Label | Goto | Return | <Break> | <Continue> | Var | Expression
+FreeStatement       = If | While | For
+
+Label               = <Label> <Identifier>
+Goto                = <Goto> <Identifier>
+Return              = <Return> (Expression)?
+
+If                  = <If> GroupedExpression Scope Else?
+Else                = <Else> (If | Scope)
+While               = <While> GroupedExpression Scope
+For                 = <For> <OpenParentheses> (Var | Expression)? <Semicolon> Expression? <Semicolon> Expression? <CloseParentheses> Scope
+
+// Literals, variables, or grouped expressions
+GroupedExpression   = <OpenParentheses> Expression <CloseParentheses>
+Value               = <True> | <False> | <Null> | <IntegerLiteral> | <FloatLiteral> | <StringLiteral> | <Identifier> | GroupedExpression
+
+// Right to left binary operators (note that Expression recurses into itself and is only optional, this preserves right to left)
+Expression          = Expression1 ((<Assignment> | <AssignmentPlus> | <AssignmentMinus> | <AssignmentMultiply> | <AssignmentDivide> | <AssignmentModulo>) Expression)?
+
+// Left to right binary operators
+Expression1         = Expression2 (<LogicalOr> Expression2)*
+Expression2         = Expression3 (<LogicalAnd> Expression3)*
+Expression3         = Expression4 ((<LessThan> | <GreaterThan> | <LessThanOrEqualTo> | <GreaterThanOrEqualTo> | <Equality> | <Inequality>) Expression4)*
+Expression4         = Expression5 ((<Plus> | <Minus>) Expression5)*
+Expression5         = Expression6 ((<Asterisk> | <Divide> | <Modulo>) Expression6)*
+
+// Right to left unary operators
+Expression6         = (<Asterisk> | <Minus> | <LogicalNot> | <Increment> | <Decrement>)* Expression7
+
+// Left to right binary operators
+Expression7         = Value (MemberAccess | Call | Cast | Index)*
+
+MemberAccess        = (<Dot> | <Arrow>) <Identifier>
+Call                = <OpenParentheses> (Expression (<Comma> Expression)*)? <CloseParentheses>
+Cast                = <As> Type
+Index               = <OpenBracket> Expression <CloseBracket>
