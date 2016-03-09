@@ -1,0 +1,3697 @@
+************** PART 1 TEST 0 **************
+Token: '"hello world"' of type 4 (StringLiteral)
+Expression
+| Expression1
+| | Expression2
+| | | Expression3
+| | | | Expression4
+| | | | | Expression5
+| | | | | | Expression6
+| | | | | | | Expression7
+| | | | | | | | Value
+| | | | | | | | | Accepted: StringLiteral
+| | | | | | | | EndValue
+| | | | | | | EndExpression7
+| | | | | | EndExpression6
+| | | | | EndExpression5
+| | | | EndExpression4
+| | | EndExpression3
+| | EndExpression2
+| EndExpression1
+EndExpression
+
+Parsing Successful
+
+ValueNode("hello world")
+*******************************************
+
+************** PART 1 TEST 1 **************
+Token: '5' of type 2 (IntegerLiteral)
+Token: ' ' of type 6 (Whitespace)
+Token: '+' of type 39 (Plus)
+Token: ' ' of type 6 (Whitespace)
+Token: '3.0' of type 3 (FloatLiteral)
+Expression
+| Expression1
+| | Expression2
+| | | Expression3
+| | | | Expression4
+| | | | | Expression5
+| | | | | | Expression6
+| | | | | | | Expression7
+| | | | | | | | Value
+| | | | | | | | | Accepted: IntegerLiteral
+| | | | | | | | EndValue
+| | | | | | | EndExpression7
+| | | | | | EndExpression6
+| | | | | EndExpression5
+| | | | | Accepted: Plus
+| | | | | Expression5
+| | | | | | Expression6
+| | | | | | | Expression7
+| | | | | | | | Value
+| | | | | | | | | Accepted: FloatLiteral
+| | | | | | | | EndValue
+| | | | | | | EndExpression7
+| | | | | | EndExpression6
+| | | | | EndExpression5
+| | | | EndExpression4
+| | | EndExpression3
+| | EndExpression2
+| EndExpression1
+EndExpression
+
+Parsing Successful
+
+BinaryOperatorNode(+)
+| ValueNode(5)
+| ValueNode(3.0)
+*******************************************
+
+************** PART 1 TEST 2 **************
+Token: '9' of type 2 (IntegerLiteral)
+Token: ' ' of type 6 (Whitespace)
+Token: '*' of type 41 (Asterisk)
+Token: ' ' of type 6 (Whitespace)
+Token: '2.0f' of type 3 (FloatLiteral)
+Token: ' ' of type 6 (Whitespace)
+Token: '*' of type 41 (Asterisk)
+Token: ' ' of type 6 (Whitespace)
+Token: '1' of type 2 (IntegerLiteral)
+Token: ' ' of type 6 (Whitespace)
+Token: '*' of type 41 (Asterisk)
+Token: ' ' of type 6 (Whitespace)
+Token: '160' of type 2 (IntegerLiteral)
+Token: ' ' of type 6 (Whitespace)
+Token: '/' of type 42 (Divide)
+Token: ' ' of type 6 (Whitespace)
+Token: '5' of type 2 (IntegerLiteral)
+Token: ' ' of type 6 (Whitespace)
+Token: '/' of type 42 (Divide)
+Token: ' ' of type 6 (Whitespace)
+Token: '10.0' of type 3 (FloatLiteral)
+Expression
+| Expression1
+| | Expression2
+| | | Expression3
+| | | | Expression4
+| | | | | Expression5
+| | | | | | Expression6
+| | | | | | | Expression7
+| | | | | | | | Value
+| | | | | | | | | Accepted: IntegerLiteral
+| | | | | | | | EndValue
+| | | | | | | EndExpression7
+| | | | | | EndExpression6
+| | | | | | Accepted: Asterisk
+| | | | | | Expression6
+| | | | | | | Expression7
+| | | | | | | | Value
+| | | | | | | | | Accepted: FloatLiteral
+| | | | | | | | EndValue
+| | | | | | | EndExpression7
+| | | | | | EndExpression6
+| | | | | | Accepted: Asterisk
+| | | | | | Expression6
+| | | | | | | Expression7
+| | | | | | | | Value
+| | | | | | | | | Accepted: IntegerLiteral
+| | | | | | | | EndValue
+| | | | | | | EndExpression7
+| | | | | | EndExpression6
+| | | | | | Accepted: Asterisk
+| | | | | | Expression6
+| | | | | | | Expression7
+| | | | | | | | Value
+| | | | | | | | | Accepted: IntegerLiteral
+| | | | | | | | EndValue
+| | | | | | | EndExpression7
+| | | | | | EndExpression6
+| | | | | | Accepted: Divide
+| | | | | | Expression6
+| | | | | | | Expression7
+| | | | | | | | Value
+| | | | | | | | | Accepted: IntegerLiteral
+| | | | | | | | EndValue
+| | | | | | | EndExpression7
+| | | | | | EndExpression6
+| | | | | | Accepted: Divide
+| | | | | | Expression6
+| | | | | | | Expression7
+| | | | | | | | Value
+| | | | | | | | | Accepted: FloatLiteral
+| | | | | | | | EndValue
+| | | | | | | EndExpression7
+| | | | | | EndExpression6
+| | | | | EndExpression5
+| | | | EndExpression4
+| | | EndExpression3
+| | EndExpression2
+| EndExpression1
+EndExpression
+
+Parsing Successful
+
+BinaryOperatorNode(/)
+| BinaryOperatorNode(/)
+| | BinaryOperatorNode(*)
+| | | BinaryOperatorNode(*)
+| | | | BinaryOperatorNode(*)
+| | | | | ValueNode(9)
+| | | | | ValueNode(2.0f)
+| | | | ValueNode(1)
+| | | ValueNode(160)
+| | ValueNode(5)
+| ValueNode(10.0)
+*******************************************
+
+************** PART 1 TEST 3 **************
+Token: 'a' of type 1 (Identifier)
+Token: ' ' of type 6 (Whitespace)
+Token: '=' of type 23 (Assignment)
+Token: ' ' of type 6 (Whitespace)
+Token: 'b' of type 1 (Identifier)
+Token: ' ' of type 6 (Whitespace)
+Token: '=' of type 23 (Assignment)
+Token: ' ' of type 6 (Whitespace)
+Token: 'c' of type 1 (Identifier)
+Token: ' ' of type 6 (Whitespace)
+Token: '=' of type 23 (Assignment)
+Token: ' ' of type 6 (Whitespace)
+Token: 'd' of type 1 (Identifier)
+Expression
+| Expression1
+| | Expression2
+| | | Expression3
+| | | | Expression4
+| | | | | Expression5
+| | | | | | Expression6
+| | | | | | | Expression7
+| | | | | | | | Value
+| | | | | | | | | Accepted: Identifier
+| | | | | | | | EndValue
+| | | | | | | EndExpression7
+| | | | | | EndExpression6
+| | | | | EndExpression5
+| | | | EndExpression4
+| | | EndExpression3
+| | EndExpression2
+| EndExpression1
+| Accepted: Assignment
+| Expression
+| | Expression1
+| | | Expression2
+| | | | Expression3
+| | | | | Expression4
+| | | | | | Expression5
+| | | | | | | Expression6
+| | | | | | | | Expression7
+| | | | | | | | | Value
+| | | | | | | | | | Accepted: Identifier
+| | | | | | | | | EndValue
+| | | | | | | | EndExpression7
+| | | | | | | EndExpression6
+| | | | | | EndExpression5
+| | | | | EndExpression4
+| | | | EndExpression3
+| | | EndExpression2
+| | EndExpression1
+| | Accepted: Assignment
+| | Expression
+| | | Expression1
+| | | | Expression2
+| | | | | Expression3
+| | | | | | Expression4
+| | | | | | | Expression5
+| | | | | | | | Expression6
+| | | | | | | | | Expression7
+| | | | | | | | | | Value
+| | | | | | | | | | | Accepted: Identifier
+| | | | | | | | | | EndValue
+| | | | | | | | | EndExpression7
+| | | | | | | | EndExpression6
+| | | | | | | EndExpression5
+| | | | | | EndExpression4
+| | | | | EndExpression3
+| | | | EndExpression2
+| | | EndExpression1
+| | | Accepted: Assignment
+| | | Expression
+| | | | Expression1
+| | | | | Expression2
+| | | | | | Expression3
+| | | | | | | Expression4
+| | | | | | | | Expression5
+| | | | | | | | | Expression6
+| | | | | | | | | | Expression7
+| | | | | | | | | | | Value
+| | | | | | | | | | | | Accepted: Identifier
+| | | | | | | | | | | EndValue
+| | | | | | | | | | EndExpression7
+| | | | | | | | | EndExpression6
+| | | | | | | | EndExpression5
+| | | | | | | EndExpression4
+| | | | | | EndExpression3
+| | | | | EndExpression2
+| | | | EndExpression1
+| | | EndExpression
+| | EndExpression
+| EndExpression
+EndExpression
+
+Parsing Successful
+
+BinaryOperatorNode(=)
+| ValueNode(a)
+| BinaryOperatorNode(=)
+| | ValueNode(b)
+| | BinaryOperatorNode(=)
+| | | ValueNode(c)
+| | | ValueNode(d)
+*******************************************
+
+************** PART 1 TEST 4 **************
+Token: 'a' of type 1 (Identifier)
+Token: ' ' of type 6 (Whitespace)
+Token: '=' of type 23 (Assignment)
+Token: ' ' of type 6 (Whitespace)
+Token: 'b' of type 1 (Identifier)
+Token: ' ' of type 6 (Whitespace)
+Token: '=' of type 23 (Assignment)
+Token: ' ' of type 6 (Whitespace)
+Token: '5' of type 2 (IntegerLiteral)
+Token: ' ' of type 6 (Whitespace)
+Token: '+' of type 39 (Plus)
+Token: ' ' of type 6 (Whitespace)
+Token: '3' of type 2 (IntegerLiteral)
+Token: ' ' of type 6 (Whitespace)
+Token: '+' of type 39 (Plus)
+Token: ' ' of type 6 (Whitespace)
+Token: '9.0' of type 3 (FloatLiteral)
+Expression
+| Expression1
+| | Expression2
+| | | Expression3
+| | | | Expression4
+| | | | | Expression5
+| | | | | | Expression6
+| | | | | | | Expression7
+| | | | | | | | Value
+| | | | | | | | | Accepted: Identifier
+| | | | | | | | EndValue
+| | | | | | | EndExpression7
+| | | | | | EndExpression6
+| | | | | EndExpression5
+| | | | EndExpression4
+| | | EndExpression3
+| | EndExpression2
+| EndExpression1
+| Accepted: Assignment
+| Expression
+| | Expression1
+| | | Expression2
+| | | | Expression3
+| | | | | Expression4
+| | | | | | Expression5
+| | | | | | | Expression6
+| | | | | | | | Expression7
+| | | | | | | | | Value
+| | | | | | | | | | Accepted: Identifier
+| | | | | | | | | EndValue
+| | | | | | | | EndExpression7
+| | | | | | | EndExpression6
+| | | | | | EndExpression5
+| | | | | EndExpression4
+| | | | EndExpression3
+| | | EndExpression2
+| | EndExpression1
+| | Accepted: Assignment
+| | Expression
+| | | Expression1
+| | | | Expression2
+| | | | | Expression3
+| | | | | | Expression4
+| | | | | | | Expression5
+| | | | | | | | Expression6
+| | | | | | | | | Expression7
+| | | | | | | | | | Value
+| | | | | | | | | | | Accepted: IntegerLiteral
+| | | | | | | | | | EndValue
+| | | | | | | | | EndExpression7
+| | | | | | | | EndExpression6
+| | | | | | | EndExpression5
+| | | | | | | Accepted: Plus
+| | | | | | | Expression5
+| | | | | | | | Expression6
+| | | | | | | | | Expression7
+| | | | | | | | | | Value
+| | | | | | | | | | | Accepted: IntegerLiteral
+| | | | | | | | | | EndValue
+| | | | | | | | | EndExpression7
+| | | | | | | | EndExpression6
+| | | | | | | EndExpression5
+| | | | | | | Accepted: Plus
+| | | | | | | Expression5
+| | | | | | | | Expression6
+| | | | | | | | | Expression7
+| | | | | | | | | | Value
+| | | | | | | | | | | Accepted: FloatLiteral
+| | | | | | | | | | EndValue
+| | | | | | | | | EndExpression7
+| | | | | | | | EndExpression6
+| | | | | | | EndExpression5
+| | | | | | EndExpression4
+| | | | | EndExpression3
+| | | | EndExpression2
+| | | EndExpression1
+| | EndExpression
+| EndExpression
+EndExpression
+
+Parsing Successful
+
+BinaryOperatorNode(=)
+| ValueNode(a)
+| BinaryOperatorNode(=)
+| | ValueNode(b)
+| | BinaryOperatorNode(+)
+| | | BinaryOperatorNode(+)
+| | | | ValueNode(5)
+| | | | ValueNode(3)
+| | | ValueNode(9.0)
+*******************************************
+
+************** PART 1 TEST 5 **************
+Token: '5' of type 2 (IntegerLiteral)
+Token: ' ' of type 6 (Whitespace)
+Token: '+' of type 39 (Plus)
+Token: ' ' of type 6 (Whitespace)
+Token: '3' of type 2 (IntegerLiteral)
+Token: ' ' of type 6 (Whitespace)
+Token: '*' of type 41 (Asterisk)
+Token: ' ' of type 6 (Whitespace)
+Token: '9' of type 2 (IntegerLiteral)
+Token: ' ' of type 6 (Whitespace)
+Token: '-' of type 40 (Minus)
+Token: ' ' of type 6 (Whitespace)
+Token: '6' of type 2 (IntegerLiteral)
+Token: ' ' of type 6 (Whitespace)
+Token: '/' of type 42 (Divide)
+Token: ' ' of type 6 (Whitespace)
+Token: '(' of type 12 (OpenParentheses)
+Token: '2' of type 2 (IntegerLiteral)
+Token: ' ' of type 6 (Whitespace)
+Token: '+' of type 39 (Plus)
+Token: ' ' of type 6 (Whitespace)
+Token: '2' of type 2 (IntegerLiteral)
+Token: ')' of type 13 (CloseParentheses)
+Token: ' ' of type 6 (Whitespace)
+Token: '||' of type 34 (LogicalOr)
+Token: ' ' of type 6 (Whitespace)
+Token: 'a' of type 1 (Identifier)
+Token: ' ' of type 6 (Whitespace)
+Token: '==' of type 28 (Equality)
+Token: ' ' of type 6 (Whitespace)
+Token: 'b' of type 1 (Identifier)
+Token: ' ' of type 6 (Whitespace)
+Token: '&&' of type 33 (LogicalAnd)
+Token: ' ' of type 6 (Whitespace)
+Token: 'a' of type 1 (Identifier)
+Token: ' ' of type 6 (Whitespace)
+Token: '!=' of type 29 (Inequality)
+Token: ' ' of type 6 (Whitespace)
+Token: '-' of type 40 (Minus)
+Token: 'c' of type 1 (Identifier)
+Expression
+| Expression1
+| | Expression2
+| | | Expression3
+| | | | Expression4
+| | | | | Expression5
+| | | | | | Expression6
+| | | | | | | Expression7
+| | | | | | | | Value
+| | | | | | | | | Accepted: IntegerLiteral
+| | | | | | | | EndValue
+| | | | | | | EndExpression7
+| | | | | | EndExpression6
+| | | | | EndExpression5
+| | | | | Accepted: Plus
+| | | | | Expression5
+| | | | | | Expression6
+| | | | | | | Expression7
+| | | | | | | | Value
+| | | | | | | | | Accepted: IntegerLiteral
+| | | | | | | | EndValue
+| | | | | | | EndExpression7
+| | | | | | EndExpression6
+| | | | | | Accepted: Asterisk
+| | | | | | Expression6
+| | | | | | | Expression7
+| | | | | | | | Value
+| | | | | | | | | Accepted: IntegerLiteral
+| | | | | | | | EndValue
+| | | | | | | EndExpression7
+| | | | | | EndExpression6
+| | | | | EndExpression5
+| | | | | Accepted: Minus
+| | | | | Expression5
+| | | | | | Expression6
+| | | | | | | Expression7
+| | | | | | | | Value
+| | | | | | | | | Accepted: IntegerLiteral
+| | | | | | | | EndValue
+| | | | | | | EndExpression7
+| | | | | | EndExpression6
+| | | | | | Accepted: Divide
+| | | | | | Expression6
+| | | | | | | Expression7
+| | | | | | | | Value
+| | | | | | | | | GroupedExpression
+| | | | | | | | | | Accepted: OpenParentheses
+| | | | | | | | | | Expression
+| | | | | | | | | | | Expression1
+| | | | | | | | | | | | Expression2
+| | | | | | | | | | | | | Expression3
+| | | | | | | | | | | | | | Expression4
+| | | | | | | | | | | | | | | Expression5
+| | | | | | | | | | | | | | | | Expression6
+| | | | | | | | | | | | | | | | | Expression7
+| | | | | | | | | | | | | | | | | | Value
+| | | | | | | | | | | | | | | | | | | Accepted: IntegerLiteral
+| | | | | | | | | | | | | | | | | | EndValue
+| | | | | | | | | | | | | | | | | EndExpression7
+| | | | | | | | | | | | | | | | EndExpression6
+| | | | | | | | | | | | | | | EndExpression5
+| | | | | | | | | | | | | | | Accepted: Plus
+| | | | | | | | | | | | | | | Expression5
+| | | | | | | | | | | | | | | | Expression6
+| | | | | | | | | | | | | | | | | Expression7
+| | | | | | | | | | | | | | | | | | Value
+| | | | | | | | | | | | | | | | | | | Accepted: IntegerLiteral
+| | | | | | | | | | | | | | | | | | EndValue
+| | | | | | | | | | | | | | | | | EndExpression7
+| | | | | | | | | | | | | | | | EndExpression6
+| | | | | | | | | | | | | | | EndExpression5
+| | | | | | | | | | | | | | EndExpression4
+| | | | | | | | | | | | | EndExpression3
+| | | | | | | | | | | | EndExpression2
+| | | | | | | | | | | EndExpression1
+| | | | | | | | | | EndExpression
+| | | | | | | | | | Accepted: CloseParentheses
+| | | | | | | | | EndGroupedExpression
+| | | | | | | | EndValue
+| | | | | | | EndExpression7
+| | | | | | EndExpression6
+| | | | | EndExpression5
+| | | | EndExpression4
+| | | EndExpression3
+| | EndExpression2
+| | Accepted: LogicalOr
+| | Expression2
+| | | Expression3
+| | | | Expression4
+| | | | | Expression5
+| | | | | | Expression6
+| | | | | | | Expression7
+| | | | | | | | Value
+| | | | | | | | | Accepted: Identifier
+| | | | | | | | EndValue
+| | | | | | | EndExpression7
+| | | | | | EndExpression6
+| | | | | EndExpression5
+| | | | EndExpression4
+| | | | Accepted: Equality
+| | | | Expression4
+| | | | | Expression5
+| | | | | | Expression6
+| | | | | | | Expression7
+| | | | | | | | Value
+| | | | | | | | | Accepted: Identifier
+| | | | | | | | EndValue
+| | | | | | | EndExpression7
+| | | | | | EndExpression6
+| | | | | EndExpression5
+| | | | EndExpression4
+| | | EndExpression3
+| | | Accepted: LogicalAnd
+| | | Expression3
+| | | | Expression4
+| | | | | Expression5
+| | | | | | Expression6
+| | | | | | | Expression7
+| | | | | | | | Value
+| | | | | | | | | Accepted: Identifier
+| | | | | | | | EndValue
+| | | | | | | EndExpression7
+| | | | | | EndExpression6
+| | | | | EndExpression5
+| | | | EndExpression4
+| | | | Accepted: Inequality
+| | | | Expression4
+| | | | | Expression5
+| | | | | | Expression6
+| | | | | | | Accepted: Minus
+| | | | | | | Expression7
+| | | | | | | | Value
+| | | | | | | | | Accepted: Identifier
+| | | | | | | | EndValue
+| | | | | | | EndExpression7
+| | | | | | EndExpression6
+| | | | | EndExpression5
+| | | | EndExpression4
+| | | EndExpression3
+| | EndExpression2
+| EndExpression1
+EndExpression
+
+Parsing Successful
+
+BinaryOperatorNode(||)
+| BinaryOperatorNode(-)
+| | BinaryOperatorNode(+)
+| | | ValueNode(5)
+| | | BinaryOperatorNode(*)
+| | | | ValueNode(3)
+| | | | ValueNode(9)
+| | BinaryOperatorNode(/)
+| | | ValueNode(6)
+| | | BinaryOperatorNode(+)
+| | | | ValueNode(2)
+| | | | ValueNode(2)
+| BinaryOperatorNode(&&)
+| | BinaryOperatorNode(==)
+| | | ValueNode(a)
+| | | ValueNode(b)
+| | BinaryOperatorNode(!=)
+| | | ValueNode(a)
+| | | UnaryOperatorNode(-)
+| | | | ValueNode(c)
+*******************************************
+
+************** PART 1 TEST 6 **************
+Token: '!' of type 32 (LogicalNot)
+Token: '--' of type 31 (Decrement)
+Token: '(' of type 12 (OpenParentheses)
+Token: '*' of type 41 (Asterisk)
+Token: '++' of type 30 (Increment)
+Token: 'a' of type 1 (Identifier)
+Token: ' ' of type 6 (Whitespace)
+Token: '-' of type 40 (Minus)
+Token: ' ' of type 6 (Whitespace)
+Token: '-' of type 40 (Minus)
+Token: '5' of type 2 (IntegerLiteral)
+Token: ')' of type 13 (CloseParentheses)
+Expression
+| Expression1
+| | Expression2
+| | | Expression3
+| | | | Expression4
+| | | | | Expression5
+| | | | | | Expression6
+| | | | | | | Accepted: LogicalNot
+| | | | | | | Accepted: Decrement
+| | | | | | | Expression7
+| | | | | | | | Value
+| | | | | | | | | GroupedExpression
+| | | | | | | | | | Accepted: OpenParentheses
+| | | | | | | | | | Expression
+| | | | | | | | | | | Expression1
+| | | | | | | | | | | | Expression2
+| | | | | | | | | | | | | Expression3
+| | | | | | | | | | | | | | Expression4
+| | | | | | | | | | | | | | | Expression5
+| | | | | | | | | | | | | | | | Expression6
+| | | | | | | | | | | | | | | | | Accepted: Asterisk
+| | | | | | | | | | | | | | | | | Accepted: Increment
+| | | | | | | | | | | | | | | | | Expression7
+| | | | | | | | | | | | | | | | | | Value
+| | | | | | | | | | | | | | | | | | | Accepted: Identifier
+| | | | | | | | | | | | | | | | | | EndValue
+| | | | | | | | | | | | | | | | | EndExpression7
+| | | | | | | | | | | | | | | | EndExpression6
+| | | | | | | | | | | | | | | EndExpression5
+| | | | | | | | | | | | | | | Accepted: Minus
+| | | | | | | | | | | | | | | Expression5
+| | | | | | | | | | | | | | | | Expression6
+| | | | | | | | | | | | | | | | | Accepted: Minus
+| | | | | | | | | | | | | | | | | Expression7
+| | | | | | | | | | | | | | | | | | Value
+| | | | | | | | | | | | | | | | | | | Accepted: IntegerLiteral
+| | | | | | | | | | | | | | | | | | EndValue
+| | | | | | | | | | | | | | | | | EndExpression7
+| | | | | | | | | | | | | | | | EndExpression6
+| | | | | | | | | | | | | | | EndExpression5
+| | | | | | | | | | | | | | EndExpression4
+| | | | | | | | | | | | | EndExpression3
+| | | | | | | | | | | | EndExpression2
+| | | | | | | | | | | EndExpression1
+| | | | | | | | | | EndExpression
+| | | | | | | | | | Accepted: CloseParentheses
+| | | | | | | | | EndGroupedExpression
+| | | | | | | | EndValue
+| | | | | | | EndExpression7
+| | | | | | EndExpression6
+| | | | | EndExpression5
+| | | | EndExpression4
+| | | EndExpression3
+| | EndExpression2
+| EndExpression1
+EndExpression
+
+Parsing Successful
+
+UnaryOperatorNode(!)
+| UnaryOperatorNode(--)
+| | BinaryOperatorNode(-)
+| | | UnaryOperatorNode(*)
+| | | | UnaryOperatorNode(++)
+| | | | | ValueNode(a)
+| | | UnaryOperatorNode(-)
+| | | | ValueNode(5)
+*******************************************
+
+************** PART 1 TEST 7 **************
+Token: '"what"' of type 4 (StringLiteral)
+Token: '[' of type 14 (OpenBracket)
+Token: '0' of type 2 (IntegerLiteral)
+Token: ']' of type 15 (CloseBracket)
+Token: '.' of type 21 (Dot)
+Token: 'ToString' of type 1 (Identifier)
+Token: '(' of type 12 (OpenParentheses)
+Token: 'formatter' of type 1 (Identifier)
+Token: ')' of type 13 (CloseParentheses)
+Token: '->' of type 22 (Arrow)
+Token: 'c_str' of type 1 (Identifier)
+Token: '(' of type 12 (OpenParentheses)
+Token: ')' of type 13 (CloseParentheses)
+Token: ' ' of type 6 (Whitespace)
+Token: 'as' of type 62 (As)
+Token: ' ' of type 6 (Whitespace)
+Token: 'Integer' of type 1 (Identifier)
+Token: ' ' of type 6 (Whitespace)
+Token: '+' of type 39 (Plus)
+Token: ' ' of type 6 (Whitespace)
+Token: '5' of type 2 (IntegerLiteral)
+Expression
+| Expression1
+| | Expression2
+| | | Expression3
+| | | | Expression4
+| | | | | Expression5
+| | | | | | Expression6
+| | | | | | | Expression7
+| | | | | | | | Value
+| | | | | | | | | Accepted: StringLiteral
+| | | | | | | | EndValue
+| | | | | | | | Index
+| | | | | | | | | Accepted: OpenBracket
+| | | | | | | | | Expression
+| | | | | | | | | | Expression1
+| | | | | | | | | | | Expression2
+| | | | | | | | | | | | Expression3
+| | | | | | | | | | | | | Expression4
+| | | | | | | | | | | | | | Expression5
+| | | | | | | | | | | | | | | Expression6
+| | | | | | | | | | | | | | | | Expression7
+| | | | | | | | | | | | | | | | | Value
+| | | | | | | | | | | | | | | | | | Accepted: IntegerLiteral
+| | | | | | | | | | | | | | | | | EndValue
+| | | | | | | | | | | | | | | | EndExpression7
+| | | | | | | | | | | | | | | EndExpression6
+| | | | | | | | | | | | | | EndExpression5
+| | | | | | | | | | | | | EndExpression4
+| | | | | | | | | | | | EndExpression3
+| | | | | | | | | | | EndExpression2
+| | | | | | | | | | EndExpression1
+| | | | | | | | | EndExpression
+| | | | | | | | | Accepted: CloseBracket
+| | | | | | | | EndIndex
+| | | | | | | | MemberAccess
+| | | | | | | | | Accepted: Dot
+| | | | | | | | | Accepted: Identifier
+| | | | | | | | EndMemberAccess
+| | | | | | | | Call
+| | | | | | | | | Accepted: OpenParentheses
+| | | | | | | | | Expression
+| | | | | | | | | | Expression1
+| | | | | | | | | | | Expression2
+| | | | | | | | | | | | Expression3
+| | | | | | | | | | | | | Expression4
+| | | | | | | | | | | | | | Expression5
+| | | | | | | | | | | | | | | Expression6
+| | | | | | | | | | | | | | | | Expression7
+| | | | | | | | | | | | | | | | | Value
+| | | | | | | | | | | | | | | | | | Accepted: Identifier
+| | | | | | | | | | | | | | | | | EndValue
+| | | | | | | | | | | | | | | | EndExpression7
+| | | | | | | | | | | | | | | EndExpression6
+| | | | | | | | | | | | | | EndExpression5
+| | | | | | | | | | | | | EndExpression4
+| | | | | | | | | | | | EndExpression3
+| | | | | | | | | | | EndExpression2
+| | | | | | | | | | EndExpression1
+| | | | | | | | | EndExpression
+| | | | | | | | | Accepted: CloseParentheses
+| | | | | | | | EndCall
+| | | | | | | | MemberAccess
+| | | | | | | | | Accepted: Arrow
+| | | | | | | | | Accepted: Identifier
+| | | | | | | | EndMemberAccess
+| | | | | | | | Call
+| | | | | | | | | Accepted: OpenParentheses
+| | | | | | | | | Accepted: CloseParentheses
+| | | | | | | | EndCall
+| | | | | | | | Cast
+| | | | | | | | | Accepted: As
+| | | | | | | | | Type
+| | | | | | | | | | Accepted: Identifier
+| | | | | | | | | EndType
+| | | | | | | | EndCast
+| | | | | | | EndExpression7
+| | | | | | EndExpression6
+| | | | | EndExpression5
+| | | | | Accepted: Plus
+| | | | | Expression5
+| | | | | | Expression6
+| | | | | | | Expression7
+| | | | | | | | Value
+| | | | | | | | | Accepted: IntegerLiteral
+| | | | | | | | EndValue
+| | | | | | | EndExpression7
+| | | | | | EndExpression6
+| | | | | EndExpression5
+| | | | EndExpression4
+| | | EndExpression3
+| | EndExpression2
+| EndExpression1
+EndExpression
+
+Parsing Successful
+
+BinaryOperatorNode(+)
+| CastNode
+| | CallNode
+| | | MemberAccessNode(->,c_str)
+| | | | CallNode
+| | | | | MemberAccessNode(.,ToString)
+| | | | | | IndexNode
+| | | | | | | ValueNode("what")
+| | | | | | | ValueNode(0)
+| | | | | ValueNode(formatter)
+| | TypeNode(Integer,0)
+| ValueNode(5)
+*******************************************
+
+************** PART 1 TEST 8 **************
+Token: '(' of type 12 (OpenParentheses)
+Token: '(' of type 12 (OpenParentheses)
+Token: '99.0' of type 3 (FloatLiteral)
+Token: ' ' of type 6 (Whitespace)
+Token: '+' of type 39 (Plus)
+Token: ' ' of type 6 (Whitespace)
+Token: '(' of type 12 (OpenParentheses)
+Token: '"str"' of type 4 (StringLiteral)
+Token: ' ' of type 6 (Whitespace)
+Token: '+' of type 39 (Plus)
+Token: ' ' of type 6 (Whitespace)
+Token: '"ing"' of type 4 (StringLiteral)
+Token: ')' of type 13 (CloseParentheses)
+Token: '[' of type 14 (OpenBracket)
+Token: 'a' of type 1 (Identifier)
+Token: ' ' of type 6 (Whitespace)
+Token: '+' of type 39 (Plus)
+Token: ' ' of type 6 (Whitespace)
+Token: '++' of type 30 (Increment)
+Token: 'b' of type 1 (Identifier)
+Token: ' ' of type 6 (Whitespace)
+Token: '*' of type 41 (Asterisk)
+Token: ' ' of type 6 (Whitespace)
+Token: '2' of type 2 (IntegerLiteral)
+Token: ']' of type 15 (CloseBracket)
+Token: '[' of type 14 (OpenBracket)
+Token: '0' of type 2 (IntegerLiteral)
+Token: ']' of type 15 (CloseBracket)
+Token: ' ' of type 6 (Whitespace)
+Token: 'as' of type 62 (As)
+Token: ' ' of type 6 (Whitespace)
+Token: 'Double' of type 1 (Identifier)
+Token: ' ' of type 6 (Whitespace)
+Token: '+' of type 39 (Plus)
+Token: ' ' of type 6 (Whitespace)
+Token: 'player' of type 1 (Identifier)
+Token: '.' of type 21 (Dot)
+Token: 'Health' of type 1 (Identifier)
+Token: '->' of type 22 (Arrow)
+Token: 'Lives' of type 1 (Identifier)
+Token: ' ' of type 6 (Whitespace)
+Token: '+' of type 39 (Plus)
+Token: ' ' of type 6 (Whitespace)
+Token: 'enemy' of type 1 (Identifier)
+Token: '.' of type 21 (Dot)
+Token: 'GetMaxLives' of type 1 (Identifier)
+Token: '(' of type 12 (OpenParentheses)
+Token: '3' of type 2 (IntegerLiteral)
+Token: ' ' of type 6 (Whitespace)
+Token: '+' of type 39 (Plus)
+Token: ' ' of type 6 (Whitespace)
+Token: 'a' of type 1 (Identifier)
+Token: '[' of type 14 (OpenBracket)
+Token: '0' of type 2 (IntegerLiteral)
+Token: ']' of type 15 (CloseBracket)
+Token: ',' of type 18 (Comma)
+Token: ' ' of type 6 (Whitespace)
+Token: '9' of type 2 (IntegerLiteral)
+Token: ' ' of type 6 (Whitespace)
+Token: 'as' of type 62 (As)
+Token: ' ' of type 6 (Whitespace)
+Token: 'Double' of type 1 (Identifier)
+Token: ')' of type 13 (CloseParentheses)
+Token: ')' of type 13 (CloseParentheses)
+Token: ' ' of type 6 (Whitespace)
+Token: '>' of type 26 (GreaterThan)
+Token: ' ' of type 6 (Whitespace)
+Token: '0' of type 2 (IntegerLiteral)
+Token: ' ' of type 6 (Whitespace)
+Token: '||' of type 34 (LogicalOr)
+Token: ' ' of type 6 (Whitespace)
+Token: 'true' of type 142 (True)
+Token: ')' of type 13 (CloseParentheses)
+Token: ' ' of type 6 (Whitespace)
+Token: '&&' of type 33 (LogicalAnd)
+Token: ' ' of type 6 (Whitespace)
+Token: 'false' of type 90 (False)
+Expression
+| Expression1
+| | Expression2
+| | | Expression3
+| | | | Expression4
+| | | | | Expression5
+| | | | | | Expression6
+| | | | | | | Expression7
+| | | | | | | | Value
+| | | | | | | | | GroupedExpression
+| | | | | | | | | | Accepted: OpenParentheses
+| | | | | | | | | | Expression
+| | | | | | | | | | | Expression1
+| | | | | | | | | | | | Expression2
+| | | | | | | | | | | | | Expression3
+| | | | | | | | | | | | | | Expression4
+| | | | | | | | | | | | | | | Expression5
+| | | | | | | | | | | | | | | | Expression6
+| | | | | | | | | | | | | | | | | Expression7
+| | | | | | | | | | | | | | | | | | Value
+| | | | | | | | | | | | | | | | | | | GroupedExpression
+| | | | | | | | | | | | | | | | | | | | Accepted: OpenParentheses
+| | | | | | | | | | | | | | | | | | | | Expression
+| | | | | | | | | | | | | | | | | | | | | Expression1
+| | | | | | | | | | | | | | | | | | | | | | Expression2
+| | | | | | | | | | | | | | | | | | | | | | | Expression3
+| | | | | | | | | | | | | | | | | | | | | | | | Expression4
+| | | | | | | | | | | | | | | | | | | | | | | | | Expression5
+| | | | | | | | | | | | | | | | | | | | | | | | | | Expression6
+| | | | | | | | | | | | | | | | | | | | | | | | | | | Expression7
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | Value
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | Accepted: FloatLiteral
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | EndValue
+| | | | | | | | | | | | | | | | | | | | | | | | | | | EndExpression7
+| | | | | | | | | | | | | | | | | | | | | | | | | | EndExpression6
+| | | | | | | | | | | | | | | | | | | | | | | | | EndExpression5
+| | | | | | | | | | | | | | | | | | | | | | | | | Accepted: Plus
+| | | | | | | | | | | | | | | | | | | | | | | | | Expression5
+| | | | | | | | | | | | | | | | | | | | | | | | | | Expression6
+| | | | | | | | | | | | | | | | | | | | | | | | | | | Expression7
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | Value
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | GroupedExpression
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Accepted: OpenParentheses
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Expression
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Expression1
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Expression2
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Expression3
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Expression4
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Expression5
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Expression6
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Expression7
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Value
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Accepted: StringLiteral
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | EndValue
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | EndExpression7
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | EndExpression6
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | EndExpression5
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Accepted: Plus
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Expression5
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Expression6
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Expression7
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Value
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Accepted: StringLiteral
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | EndValue
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | EndExpression7
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | EndExpression6
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | EndExpression5
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | EndExpression4
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | EndExpression3
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | EndExpression2
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | EndExpression1
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | EndExpression
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Accepted: CloseParentheses
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | EndGroupedExpression
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | EndValue
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | Index
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | Accepted: OpenBracket
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | Expression
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Expression1
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Expression2
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Expression3
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Expression4
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Expression5
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Expression6
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Expression7
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Value
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Accepted: Identifier
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | EndValue
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | EndExpression7
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | EndExpression6
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | EndExpression5
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Accepted: Plus
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Expression5
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Expression6
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Accepted: Increment
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Expression7
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Value
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Accepted: Identifier
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | EndValue
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | EndExpression7
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | EndExpression6
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Accepted: Asterisk
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Expression6
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Expression7
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Value
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Accepted: IntegerLiteral
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | EndValue
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | EndExpression7
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | EndExpression6
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | EndExpression5
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | EndExpression4
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | EndExpression3
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | EndExpression2
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | EndExpression1
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | EndExpression
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | Accepted: CloseBracket
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | EndIndex
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | Index
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | Accepted: OpenBracket
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | Expression
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Expression1
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Expression2
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Expression3
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Expression4
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Expression5
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Expression6
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Expression7
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Value
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Accepted: IntegerLiteral
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | EndValue
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | EndExpression7
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | EndExpression6
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | EndExpression5
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | EndExpression4
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | EndExpression3
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | EndExpression2
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | EndExpression1
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | EndExpression
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | Accepted: CloseBracket
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | EndIndex
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | Cast
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | Accepted: As
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | Type
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Accepted: Identifier
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | EndType
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | EndCast
+| | | | | | | | | | | | | | | | | | | | | | | | | | | EndExpression7
+| | | | | | | | | | | | | | | | | | | | | | | | | | EndExpression6
+| | | | | | | | | | | | | | | | | | | | | | | | | EndExpression5
+| | | | | | | | | | | | | | | | | | | | | | | | | Accepted: Plus
+| | | | | | | | | | | | | | | | | | | | | | | | | Expression5
+| | | | | | | | | | | | | | | | | | | | | | | | | | Expression6
+| | | | | | | | | | | | | | | | | | | | | | | | | | | Expression7
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | Value
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | Accepted: Identifier
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | EndValue
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | MemberAccess
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | Accepted: Dot
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | Accepted: Identifier
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | EndMemberAccess
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | MemberAccess
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | Accepted: Arrow
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | Accepted: Identifier
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | EndMemberAccess
+| | | | | | | | | | | | | | | | | | | | | | | | | | | EndExpression7
+| | | | | | | | | | | | | | | | | | | | | | | | | | EndExpression6
+| | | | | | | | | | | | | | | | | | | | | | | | | EndExpression5
+| | | | | | | | | | | | | | | | | | | | | | | | | Accepted: Plus
+| | | | | | | | | | | | | | | | | | | | | | | | | Expression5
+| | | | | | | | | | | | | | | | | | | | | | | | | | Expression6
+| | | | | | | | | | | | | | | | | | | | | | | | | | | Expression7
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | Value
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | Accepted: Identifier
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | EndValue
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | MemberAccess
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | Accepted: Dot
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | Accepted: Identifier
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | EndMemberAccess
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | Call
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | Accepted: OpenParentheses
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | Expression
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Expression1
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Expression2
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Expression3
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Expression4
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Expression5
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Expression6
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Expression7
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Value
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Accepted: IntegerLiteral
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | EndValue
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | EndExpression7
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | EndExpression6
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | EndExpression5
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Accepted: Plus
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Expression5
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Expression6
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Expression7
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Value
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Accepted: Identifier
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | EndValue
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Index
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Accepted: OpenBracket
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Expression
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Expression1
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Expression2
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Expression3
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Expression4
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Expression5
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Expression6
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Expression7
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Value
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Accepted: IntegerLiteral
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | EndValue
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | EndExpression7
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | EndExpression6
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | EndExpression5
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | EndExpression4
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | EndExpression3
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | EndExpression2
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | EndExpression1
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | EndExpression
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Accepted: CloseBracket
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | EndIndex
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | EndExpression7
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | EndExpression6
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | EndExpression5
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | EndExpression4
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | EndExpression3
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | EndExpression2
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | EndExpression1
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | EndExpression
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | Accepted: Comma
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | Expression
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Expression1
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Expression2
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Expression3
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Expression4
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Expression5
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Expression6
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Expression7
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Value
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Accepted: IntegerLiteral
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | EndValue
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Cast
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Accepted: As
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Type
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Accepted: Identifier
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | EndType
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | EndCast
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | EndExpression7
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | EndExpression6
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | EndExpression5
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | EndExpression4
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | EndExpression3
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | EndExpression2
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | EndExpression1
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | EndExpression
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | Accepted: CloseParentheses
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | EndCall
+| | | | | | | | | | | | | | | | | | | | | | | | | | | EndExpression7
+| | | | | | | | | | | | | | | | | | | | | | | | | | EndExpression6
+| | | | | | | | | | | | | | | | | | | | | | | | | EndExpression5
+| | | | | | | | | | | | | | | | | | | | | | | | EndExpression4
+| | | | | | | | | | | | | | | | | | | | | | | EndExpression3
+| | | | | | | | | | | | | | | | | | | | | | EndExpression2
+| | | | | | | | | | | | | | | | | | | | | EndExpression1
+| | | | | | | | | | | | | | | | | | | | EndExpression
+| | | | | | | | | | | | | | | | | | | | Accepted: CloseParentheses
+| | | | | | | | | | | | | | | | | | | EndGroupedExpression
+| | | | | | | | | | | | | | | | | | EndValue
+| | | | | | | | | | | | | | | | | EndExpression7
+| | | | | | | | | | | | | | | | EndExpression6
+| | | | | | | | | | | | | | | EndExpression5
+| | | | | | | | | | | | | | EndExpression4
+| | | | | | | | | | | | | | Accepted: GreaterThan
+| | | | | | | | | | | | | | Expression4
+| | | | | | | | | | | | | | | Expression5
+| | | | | | | | | | | | | | | | Expression6
+| | | | | | | | | | | | | | | | | Expression7
+| | | | | | | | | | | | | | | | | | Value
+| | | | | | | | | | | | | | | | | | | Accepted: IntegerLiteral
+| | | | | | | | | | | | | | | | | | EndValue
+| | | | | | | | | | | | | | | | | EndExpression7
+| | | | | | | | | | | | | | | | EndExpression6
+| | | | | | | | | | | | | | | EndExpression5
+| | | | | | | | | | | | | | EndExpression4
+| | | | | | | | | | | | | EndExpression3
+| | | | | | | | | | | | EndExpression2
+| | | | | | | | | | | | Accepted: LogicalOr
+| | | | | | | | | | | | Expression2
+| | | | | | | | | | | | | Expression3
+| | | | | | | | | | | | | | Expression4
+| | | | | | | | | | | | | | | Expression5
+| | | | | | | | | | | | | | | | Expression6
+| | | | | | | | | | | | | | | | | Expression7
+| | | | | | | | | | | | | | | | | | Value
+| | | | | | | | | | | | | | | | | | | Accepted: True
+| | | | | | | | | | | | | | | | | | EndValue
+| | | | | | | | | | | | | | | | | EndExpression7
+| | | | | | | | | | | | | | | | EndExpression6
+| | | | | | | | | | | | | | | EndExpression5
+| | | | | | | | | | | | | | EndExpression4
+| | | | | | | | | | | | | EndExpression3
+| | | | | | | | | | | | EndExpression2
+| | | | | | | | | | | EndExpression1
+| | | | | | | | | | EndExpression
+| | | | | | | | | | Accepted: CloseParentheses
+| | | | | | | | | EndGroupedExpression
+| | | | | | | | EndValue
+| | | | | | | EndExpression7
+| | | | | | EndExpression6
+| | | | | EndExpression5
+| | | | EndExpression4
+| | | EndExpression3
+| | | Accepted: LogicalAnd
+| | | Expression3
+| | | | Expression4
+| | | | | Expression5
+| | | | | | Expression6
+| | | | | | | Expression7
+| | | | | | | | Value
+| | | | | | | | | Accepted: False
+| | | | | | | | EndValue
+| | | | | | | EndExpression7
+| | | | | | EndExpression6
+| | | | | EndExpression5
+| | | | EndExpression4
+| | | EndExpression3
+| | EndExpression2
+| EndExpression1
+EndExpression
+
+Parsing Successful
+
+BinaryOperatorNode(&&)
+| BinaryOperatorNode(||)
+| | BinaryOperatorNode(>)
+| | | BinaryOperatorNode(+)
+| | | | BinaryOperatorNode(+)
+| | | | | BinaryOperatorNode(+)
+| | | | | | ValueNode(99.0)
+| | | | | | CastNode
+| | | | | | | IndexNode
+| | | | | | | | IndexNode
+| | | | | | | | | BinaryOperatorNode(+)
+| | | | | | | | | | ValueNode("str")
+| | | | | | | | | | ValueNode("ing")
+| | | | | | | | | BinaryOperatorNode(+)
+| | | | | | | | | | ValueNode(a)
+| | | | | | | | | | BinaryOperatorNode(*)
+| | | | | | | | | | | UnaryOperatorNode(++)
+| | | | | | | | | | | | ValueNode(b)
+| | | | | | | | | | | ValueNode(2)
+| | | | | | | | ValueNode(0)
+| | | | | | | TypeNode(Double,0)
+| | | | | MemberAccessNode(->,Lives)
+| | | | | | MemberAccessNode(.,Health)
+| | | | | | | ValueNode(player)
+| | | | CallNode
+| | | | | MemberAccessNode(.,GetMaxLives)
+| | | | | | ValueNode(enemy)
+| | | | | BinaryOperatorNode(+)
+| | | | | | ValueNode(3)
+| | | | | | IndexNode
+| | | | | | | ValueNode(a)
+| | | | | | | ValueNode(0)
+| | | | | CastNode
+| | | | | | ValueNode(9)
+| | | | | | TypeNode(Double,0)
+| | | ValueNode(0)
+| | ValueNode(true)
+| ValueNode(false)
+*******************************************
+
+************** PART 2 TEST 9 **************
+Block
+EndBlock
+
+Parsing Successful
+
+BlockNode
+*******************************************
+
+************** PART 2 TEST 10 **************
+Token: 'function' of type 96 (Function)
+Token: ' ' of type 6 (Whitespace)
+Token: 'Print' of type 1 (Identifier)
+Token: '(' of type 12 (OpenParentheses)
+Token: 'value' of type 1 (Identifier)
+Token: ' ' of type 6 (Whitespace)
+Token: ':' of type 17 (Colon)
+Token: ' ' of type 6 (Whitespace)
+Token: 'String' of type 1 (Identifier)
+Token: '*' of type 41 (Asterisk)
+Token: ')' of type 13 (CloseParentheses)
+Token: ' ' of type 6 (Whitespace)
+Token: '{' of type 10 (OpenCurley)
+Token: ' ' of type 6 (Whitespace)
+Token: '}' of type 11 (CloseCurley)
+Block
+| Function
+| | Accepted: Function
+| | Accepted: Identifier
+| | Accepted: OpenParentheses
+| | Parameter
+| | | Accepted: Identifier
+| | | SpecifiedType
+| | | | Accepted: Colon
+| | | | Type
+| | | | | Accepted: Identifier
+| | | | | Accepted: Asterisk
+| | | | EndType
+| | | EndSpecifiedType
+| | EndParameter
+| | Accepted: CloseParentheses
+| | Scope
+| | | Accepted: OpenCurley
+| | | Accepted: CloseCurley
+| | EndScope
+| EndFunction
+EndBlock
+
+Parsing Successful
+
+BlockNode
+| FunctionNode(Print)
+| | ParameterNode(value)
+| | | TypeNode(String,1)
+| | ScopeNode
+*******************************************
+
+************** PART 2 TEST 11 **************
+Token: 'class' of type 70 (Class)
+Token: ' ' of type 6 (Whitespace)
+Token: 'Player' of type 1 (Identifier)
+Token: ' ' of type 6 (Whitespace)
+Token: '{' of type 10 (OpenCurley)
+Token: ' ' of type 6 (Whitespace)
+Token: '}' of type 11 (CloseCurley)
+Block
+| Class
+| | Accepted: Class
+| | Accepted: Identifier
+| | Accepted: OpenCurley
+| | Accepted: CloseCurley
+| EndClass
+EndBlock
+
+Parsing Successful
+
+BlockNode
+| ClassNode(Player)
+*******************************************
+
+************** PART 2 TEST 12 **************
+Token: 'function' of type 96 (Function)
+Token: ' ' of type 6 (Whitespace)
+Token: 'DoSomething' of type 1 (Identifier)
+Token: '(' of type 12 (OpenParentheses)
+Token: ')' of type 13 (CloseParentheses)
+Token: ' ' of type 6 (Whitespace)
+Token: '{' of type 10 (OpenCurley)
+Token: ' ' of type 6 (Whitespace)
+Token: 'while' of type 155 (While)
+Token: '(' of type 12 (OpenParentheses)
+Token: 'true' of type 142 (True)
+Token: ')' of type 13 (CloseParentheses)
+Token: ' ' of type 6 (Whitespace)
+Token: '{' of type 10 (OpenCurley)
+Token: ' ' of type 6 (Whitespace)
+Token: '}' of type 11 (CloseCurley)
+Token: ' ' of type 6 (Whitespace)
+Token: '}' of type 11 (CloseCurley)
+Block
+| Function
+| | Accepted: Function
+| | Accepted: Identifier
+| | Accepted: OpenParentheses
+| | Accepted: CloseParentheses
+| | Scope
+| | | Accepted: OpenCurley
+| | | Statement
+| | | | FreeStatement
+| | | | | While
+| | | | | | Accepted: While
+| | | | | | GroupedExpression
+| | | | | | | Accepted: OpenParentheses
+| | | | | | | Expression
+| | | | | | | | Expression1
+| | | | | | | | | Expression2
+| | | | | | | | | | Expression3
+| | | | | | | | | | | Expression4
+| | | | | | | | | | | | Expression5
+| | | | | | | | | | | | | Expression6
+| | | | | | | | | | | | | | Expression7
+| | | | | | | | | | | | | | | Value
+| | | | | | | | | | | | | | | | Accepted: True
+| | | | | | | | | | | | | | | EndValue
+| | | | | | | | | | | | | | EndExpression7
+| | | | | | | | | | | | | EndExpression6
+| | | | | | | | | | | | EndExpression5
+| | | | | | | | | | | EndExpression4
+| | | | | | | | | | EndExpression3
+| | | | | | | | | EndExpression2
+| | | | | | | | EndExpression1
+| | | | | | | EndExpression
+| | | | | | | Accepted: CloseParentheses
+| | | | | | EndGroupedExpression
+| | | | | | Scope
+| | | | | | | Accepted: OpenCurley
+| | | | | | | Accepted: CloseCurley
+| | | | | | EndScope
+| | | | | EndWhile
+| | | | EndFreeStatement
+| | | EndStatement
+| | | Accepted: CloseCurley
+| | EndScope
+| EndFunction
+EndBlock
+
+Parsing Successful
+
+BlockNode
+| FunctionNode(DoSomething)
+| | ScopeNode
+| | | WhileNode
+| | | | ValueNode(true)
+| | | | ScopeNode
+*******************************************
+
+************** PART 2 TEST 13 **************
+Token: 'function' of type 96 (Function)
+Token: ' ' of type 6 (Whitespace)
+Token: 'DoSomething' of type 1 (Identifier)
+Token: '(' of type 12 (OpenParentheses)
+Token: ')' of type 13 (CloseParentheses)
+Token: ' ' of type 6 (Whitespace)
+Token: '{' of type 10 (OpenCurley)
+Token: ' ' of type 6 (Whitespace)
+Token: 'for' of type 93 (For)
+Token: ' ' of type 6 (Whitespace)
+Token: '(' of type 12 (OpenParentheses)
+Token: 'var' of type 152 (Var)
+Token: ' ' of type 6 (Whitespace)
+Token: 'i' of type 1 (Identifier)
+Token: ' ' of type 6 (Whitespace)
+Token: ':' of type 17 (Colon)
+Token: ' ' of type 6 (Whitespace)
+Token: 'Integer' of type 1 (Identifier)
+Token: ' ' of type 6 (Whitespace)
+Token: '=' of type 23 (Assignment)
+Token: ' ' of type 6 (Whitespace)
+Token: '0' of type 2 (IntegerLiteral)
+Token: ';' of type 16 (Semicolon)
+Token: ' ' of type 6 (Whitespace)
+Token: 'i' of type 1 (Identifier)
+Token: ' ' of type 6 (Whitespace)
+Token: '<' of type 24 (LessThan)
+Token: ' ' of type 6 (Whitespace)
+Token: '100' of type 2 (IntegerLiteral)
+Token: ';' of type 16 (Semicolon)
+Token: ' ' of type 6 (Whitespace)
+Token: '++' of type 30 (Increment)
+Token: 'i' of type 1 (Identifier)
+Token: ')' of type 13 (CloseParentheses)
+Token: ' ' of type 6 (Whitespace)
+Token: '{' of type 10 (OpenCurley)
+Token: ' ' of type 6 (Whitespace)
+Token: 'Print' of type 1 (Identifier)
+Token: '(' of type 12 (OpenParentheses)
+Token: '"hello world"' of type 4 (StringLiteral)
+Token: ')' of type 13 (CloseParentheses)
+Token: ';' of type 16 (Semicolon)
+Token: ' ' of type 6 (Whitespace)
+Token: '}' of type 11 (CloseCurley)
+Token: ' ' of type 6 (Whitespace)
+Token: '}' of type 11 (CloseCurley)
+Block
+| Function
+| | Accepted: Function
+| | Accepted: Identifier
+| | Accepted: OpenParentheses
+| | Accepted: CloseParentheses
+| | Scope
+| | | Accepted: OpenCurley
+| | | Statement
+| | | | FreeStatement
+| | | | | For
+| | | | | | Accepted: For
+| | | | | | Accepted: OpenParentheses
+| | | | | | Var
+| | | | | | | Accepted: Var
+| | | | | | | Accepted: Identifier
+| | | | | | | SpecifiedType
+| | | | | | | | Accepted: Colon
+| | | | | | | | Type
+| | | | | | | | | Accepted: Identifier
+| | | | | | | | EndType
+| | | | | | | EndSpecifiedType
+| | | | | | | Accepted: Assignment
+| | | | | | | Expression
+| | | | | | | | Expression1
+| | | | | | | | | Expression2
+| | | | | | | | | | Expression3
+| | | | | | | | | | | Expression4
+| | | | | | | | | | | | Expression5
+| | | | | | | | | | | | | Expression6
+| | | | | | | | | | | | | | Expression7
+| | | | | | | | | | | | | | | Value
+| | | | | | | | | | | | | | | | Accepted: IntegerLiteral
+| | | | | | | | | | | | | | | EndValue
+| | | | | | | | | | | | | | EndExpression7
+| | | | | | | | | | | | | EndExpression6
+| | | | | | | | | | | | EndExpression5
+| | | | | | | | | | | EndExpression4
+| | | | | | | | | | EndExpression3
+| | | | | | | | | EndExpression2
+| | | | | | | | EndExpression1
+| | | | | | | EndExpression
+| | | | | | EndVar
+| | | | | | Accepted: Semicolon
+| | | | | | Expression
+| | | | | | | Expression1
+| | | | | | | | Expression2
+| | | | | | | | | Expression3
+| | | | | | | | | | Expression4
+| | | | | | | | | | | Expression5
+| | | | | | | | | | | | Expression6
+| | | | | | | | | | | | | Expression7
+| | | | | | | | | | | | | | Value
+| | | | | | | | | | | | | | | Accepted: Identifier
+| | | | | | | | | | | | | | EndValue
+| | | | | | | | | | | | | EndExpression7
+| | | | | | | | | | | | EndExpression6
+| | | | | | | | | | | EndExpression5
+| | | | | | | | | | EndExpression4
+| | | | | | | | | | Accepted: LessThan
+| | | | | | | | | | Expression4
+| | | | | | | | | | | Expression5
+| | | | | | | | | | | | Expression6
+| | | | | | | | | | | | | Expression7
+| | | | | | | | | | | | | | Value
+| | | | | | | | | | | | | | | Accepted: IntegerLiteral
+| | | | | | | | | | | | | | EndValue
+| | | | | | | | | | | | | EndExpression7
+| | | | | | | | | | | | EndExpression6
+| | | | | | | | | | | EndExpression5
+| | | | | | | | | | EndExpression4
+| | | | | | | | | EndExpression3
+| | | | | | | | EndExpression2
+| | | | | | | EndExpression1
+| | | | | | EndExpression
+| | | | | | Accepted: Semicolon
+| | | | | | Expression
+| | | | | | | Expression1
+| | | | | | | | Expression2
+| | | | | | | | | Expression3
+| | | | | | | | | | Expression4
+| | | | | | | | | | | Expression5
+| | | | | | | | | | | | Expression6
+| | | | | | | | | | | | | Accepted: Increment
+| | | | | | | | | | | | | Expression7
+| | | | | | | | | | | | | | Value
+| | | | | | | | | | | | | | | Accepted: Identifier
+| | | | | | | | | | | | | | EndValue
+| | | | | | | | | | | | | EndExpression7
+| | | | | | | | | | | | EndExpression6
+| | | | | | | | | | | EndExpression5
+| | | | | | | | | | EndExpression4
+| | | | | | | | | EndExpression3
+| | | | | | | | EndExpression2
+| | | | | | | EndExpression1
+| | | | | | EndExpression
+| | | | | | Accepted: CloseParentheses
+| | | | | | Scope
+| | | | | | | Accepted: OpenCurley
+| | | | | | | Statement
+| | | | | | | | DelimitedStatement
+| | | | | | | | | Expression
+| | | | | | | | | | Expression1
+| | | | | | | | | | | Expression2
+| | | | | | | | | | | | Expression3
+| | | | | | | | | | | | | Expression4
+| | | | | | | | | | | | | | Expression5
+| | | | | | | | | | | | | | | Expression6
+| | | | | | | | | | | | | | | | Expression7
+| | | | | | | | | | | | | | | | | Value
+| | | | | | | | | | | | | | | | | | Accepted: Identifier
+| | | | | | | | | | | | | | | | | EndValue
+| | | | | | | | | | | | | | | | | Call
+| | | | | | | | | | | | | | | | | | Accepted: OpenParentheses
+| | | | | | | | | | | | | | | | | | Expression
+| | | | | | | | | | | | | | | | | | | Expression1
+| | | | | | | | | | | | | | | | | | | | Expression2
+| | | | | | | | | | | | | | | | | | | | | Expression3
+| | | | | | | | | | | | | | | | | | | | | | Expression4
+| | | | | | | | | | | | | | | | | | | | | | | Expression5
+| | | | | | | | | | | | | | | | | | | | | | | | Expression6
+| | | | | | | | | | | | | | | | | | | | | | | | | Expression7
+| | | | | | | | | | | | | | | | | | | | | | | | | | Value
+| | | | | | | | | | | | | | | | | | | | | | | | | | | Accepted: StringLiteral
+| | | | | | | | | | | | | | | | | | | | | | | | | | EndValue
+| | | | | | | | | | | | | | | | | | | | | | | | | EndExpression7
+| | | | | | | | | | | | | | | | | | | | | | | | EndExpression6
+| | | | | | | | | | | | | | | | | | | | | | | EndExpression5
+| | | | | | | | | | | | | | | | | | | | | | EndExpression4
+| | | | | | | | | | | | | | | | | | | | | EndExpression3
+| | | | | | | | | | | | | | | | | | | | EndExpression2
+| | | | | | | | | | | | | | | | | | | EndExpression1
+| | | | | | | | | | | | | | | | | | EndExpression
+| | | | | | | | | | | | | | | | | | Accepted: CloseParentheses
+| | | | | | | | | | | | | | | | | EndCall
+| | | | | | | | | | | | | | | | EndExpression7
+| | | | | | | | | | | | | | | EndExpression6
+| | | | | | | | | | | | | | EndExpression5
+| | | | | | | | | | | | | EndExpression4
+| | | | | | | | | | | | EndExpression3
+| | | | | | | | | | | EndExpression2
+| | | | | | | | | | EndExpression1
+| | | | | | | | | EndExpression
+| | | | | | | | EndDelimitedStatement
+| | | | | | | | Accepted: Semicolon
+| | | | | | | EndStatement
+| | | | | | | Accepted: CloseCurley
+| | | | | | EndScope
+| | | | | EndFor
+| | | | EndFreeStatement
+| | | EndStatement
+| | | Accepted: CloseCurley
+| | EndScope
+| EndFunction
+EndBlock
+
+Parsing Successful
+
+BlockNode
+| FunctionNode(DoSomething)
+| | ScopeNode
+| | | ForNode
+| | | | VariableNode(i)
+| | | | | TypeNode(Integer,0)
+| | | | | ValueNode(0)
+| | | | BinaryOperatorNode(<)
+| | | | | ValueNode(i)
+| | | | | ValueNode(100)
+| | | | ScopeNode
+| | | | | CallNode
+| | | | | | ValueNode(Print)
+| | | | | | ValueNode("hello world")
+| | | | UnaryOperatorNode(++)
+| | | | | ValueNode(i)
+*******************************************
+
+************** PART 2 TEST 14 **************
+Token: 'function' of type 96 (Function)
+Token: ' ' of type 6 (Whitespace)
+Token: 'DoSomething' of type 1 (Identifier)
+Token: '(' of type 12 (OpenParentheses)
+Token: ')' of type 13 (CloseParentheses)
+Token: ' ' of type 6 (Whitespace)
+Token: '{' of type 10 (OpenCurley)
+Token: ' ' of type 6 (Whitespace)
+Token: 'var' of type 152 (Var)
+Token: ' ' of type 6 (Whitespace)
+Token: 'a' of type 1 (Identifier)
+Token: ' ' of type 6 (Whitespace)
+Token: ':' of type 17 (Colon)
+Token: ' ' of type 6 (Whitespace)
+Token: 'Integer' of type 1 (Identifier)
+Token: ' ' of type 6 (Whitespace)
+Token: '=' of type 23 (Assignment)
+Token: ' ' of type 6 (Whitespace)
+Token: '10' of type 2 (IntegerLiteral)
+Token: ';' of type 16 (Semicolon)
+Token: ' ' of type 6 (Whitespace)
+Token: 'if' of type 100 (If)
+Token: ' ' of type 6 (Whitespace)
+Token: '(' of type 12 (OpenParentheses)
+Token: 'a' of type 1 (Identifier)
+Token: ' ' of type 6 (Whitespace)
+Token: '>' of type 26 (GreaterThan)
+Token: ' ' of type 6 (Whitespace)
+Token: '5' of type 2 (IntegerLiteral)
+Token: ')' of type 13 (CloseParentheses)
+Token: ' ' of type 6 (Whitespace)
+Token: '{' of type 10 (OpenCurley)
+Token: ' ' of type 6 (Whitespace)
+Token: '}' of type 11 (CloseCurley)
+Token: ' ' of type 6 (Whitespace)
+Token: '}' of type 11 (CloseCurley)
+Block
+| Function
+| | Accepted: Function
+| | Accepted: Identifier
+| | Accepted: OpenParentheses
+| | Accepted: CloseParentheses
+| | Scope
+| | | Accepted: OpenCurley
+| | | Statement
+| | | | DelimitedStatement
+| | | | | Var
+| | | | | | Accepted: Var
+| | | | | | Accepted: Identifier
+| | | | | | SpecifiedType
+| | | | | | | Accepted: Colon
+| | | | | | | Type
+| | | | | | | | Accepted: Identifier
+| | | | | | | EndType
+| | | | | | EndSpecifiedType
+| | | | | | Accepted: Assignment
+| | | | | | Expression
+| | | | | | | Expression1
+| | | | | | | | Expression2
+| | | | | | | | | Expression3
+| | | | | | | | | | Expression4
+| | | | | | | | | | | Expression5
+| | | | | | | | | | | | Expression6
+| | | | | | | | | | | | | Expression7
+| | | | | | | | | | | | | | Value
+| | | | | | | | | | | | | | | Accepted: IntegerLiteral
+| | | | | | | | | | | | | | EndValue
+| | | | | | | | | | | | | EndExpression7
+| | | | | | | | | | | | EndExpression6
+| | | | | | | | | | | EndExpression5
+| | | | | | | | | | EndExpression4
+| | | | | | | | | EndExpression3
+| | | | | | | | EndExpression2
+| | | | | | | EndExpression1
+| | | | | | EndExpression
+| | | | | EndVar
+| | | | EndDelimitedStatement
+| | | | Accepted: Semicolon
+| | | EndStatement
+| | | Statement
+| | | | FreeStatement
+| | | | | If
+| | | | | | Accepted: If
+| | | | | | GroupedExpression
+| | | | | | | Accepted: OpenParentheses
+| | | | | | | Expression
+| | | | | | | | Expression1
+| | | | | | | | | Expression2
+| | | | | | | | | | Expression3
+| | | | | | | | | | | Expression4
+| | | | | | | | | | | | Expression5
+| | | | | | | | | | | | | Expression6
+| | | | | | | | | | | | | | Expression7
+| | | | | | | | | | | | | | | Value
+| | | | | | | | | | | | | | | | Accepted: Identifier
+| | | | | | | | | | | | | | | EndValue
+| | | | | | | | | | | | | | EndExpression7
+| | | | | | | | | | | | | EndExpression6
+| | | | | | | | | | | | EndExpression5
+| | | | | | | | | | | EndExpression4
+| | | | | | | | | | | Accepted: GreaterThan
+| | | | | | | | | | | Expression4
+| | | | | | | | | | | | Expression5
+| | | | | | | | | | | | | Expression6
+| | | | | | | | | | | | | | Expression7
+| | | | | | | | | | | | | | | Value
+| | | | | | | | | | | | | | | | Accepted: IntegerLiteral
+| | | | | | | | | | | | | | | EndValue
+| | | | | | | | | | | | | | EndExpression7
+| | | | | | | | | | | | | EndExpression6
+| | | | | | | | | | | | EndExpression5
+| | | | | | | | | | | EndExpression4
+| | | | | | | | | | EndExpression3
+| | | | | | | | | EndExpression2
+| | | | | | | | EndExpression1
+| | | | | | | EndExpression
+| | | | | | | Accepted: CloseParentheses
+| | | | | | EndGroupedExpression
+| | | | | | Scope
+| | | | | | | Accepted: OpenCurley
+| | | | | | | Accepted: CloseCurley
+| | | | | | EndScope
+| | | | | EndIf
+| | | | EndFreeStatement
+| | | EndStatement
+| | | Accepted: CloseCurley
+| | EndScope
+| EndFunction
+EndBlock
+
+Parsing Successful
+
+BlockNode
+| FunctionNode(DoSomething)
+| | ScopeNode
+| | | VariableNode(a)
+| | | | TypeNode(Integer,0)
+| | | | ValueNode(10)
+| | | IfNode
+| | | | BinaryOperatorNode(>)
+| | | | | ValueNode(a)
+| | | | | ValueNode(5)
+| | | | ScopeNode
+*******************************************
+
+************** PART 2 TEST 15 **************
+Token: 'function' of type 96 (Function)
+Token: ' ' of type 6 (Whitespace)
+Token: 'DoSomething' of type 1 (Identifier)
+Token: '(' of type 12 (OpenParentheses)
+Token: ')' of type 13 (CloseParentheses)
+Token: ' ' of type 6 (Whitespace)
+Token: '{' of type 10 (OpenCurley)
+Token: ' ' of type 6 (Whitespace)
+Token: 'var' of type 152 (Var)
+Token: ' ' of type 6 (Whitespace)
+Token: 'b' of type 1 (Identifier)
+Token: ' ' of type 6 (Whitespace)
+Token: ':' of type 17 (Colon)
+Token: ' ' of type 6 (Whitespace)
+Token: 'Integer' of type 1 (Identifier)
+Token: ' ' of type 6 (Whitespace)
+Token: '=' of type 23 (Assignment)
+Token: ' ' of type 6 (Whitespace)
+Token: '20' of type 2 (IntegerLiteral)
+Token: ';' of type 16 (Semicolon)
+Token: ' ' of type 6 (Whitespace)
+Token: 'if' of type 100 (If)
+Token: ' ' of type 6 (Whitespace)
+Token: '(' of type 12 (OpenParentheses)
+Token: 'b' of type 1 (Identifier)
+Token: ' ' of type 6 (Whitespace)
+Token: '==' of type 28 (Equality)
+Token: ' ' of type 6 (Whitespace)
+Token: '10' of type 2 (IntegerLiteral)
+Token: ')' of type 13 (CloseParentheses)
+Token: ' ' of type 6 (Whitespace)
+Token: '{' of type 10 (OpenCurley)
+Token: ' ' of type 6 (Whitespace)
+Token: '}' of type 11 (CloseCurley)
+Token: ' ' of type 6 (Whitespace)
+Token: 'else' of type 84 (Else)
+Token: ' ' of type 6 (Whitespace)
+Token: 'if' of type 100 (If)
+Token: ' ' of type 6 (Whitespace)
+Token: '(' of type 12 (OpenParentheses)
+Token: 'b' of type 1 (Identifier)
+Token: ' ' of type 6 (Whitespace)
+Token: '==' of type 28 (Equality)
+Token: ' ' of type 6 (Whitespace)
+Token: '20' of type 2 (IntegerLiteral)
+Token: ')' of type 13 (CloseParentheses)
+Token: ' ' of type 6 (Whitespace)
+Token: '{' of type 10 (OpenCurley)
+Token: ' ' of type 6 (Whitespace)
+Token: '}' of type 11 (CloseCurley)
+Token: ' ' of type 6 (Whitespace)
+Token: 'else' of type 84 (Else)
+Token: ' ' of type 6 (Whitespace)
+Token: '{' of type 10 (OpenCurley)
+Token: ' ' of type 6 (Whitespace)
+Token: '}' of type 11 (CloseCurley)
+Token: ' ' of type 6 (Whitespace)
+Token: '}' of type 11 (CloseCurley)
+Block
+| Function
+| | Accepted: Function
+| | Accepted: Identifier
+| | Accepted: OpenParentheses
+| | Accepted: CloseParentheses
+| | Scope
+| | | Accepted: OpenCurley
+| | | Statement
+| | | | DelimitedStatement
+| | | | | Var
+| | | | | | Accepted: Var
+| | | | | | Accepted: Identifier
+| | | | | | SpecifiedType
+| | | | | | | Accepted: Colon
+| | | | | | | Type
+| | | | | | | | Accepted: Identifier
+| | | | | | | EndType
+| | | | | | EndSpecifiedType
+| | | | | | Accepted: Assignment
+| | | | | | Expression
+| | | | | | | Expression1
+| | | | | | | | Expression2
+| | | | | | | | | Expression3
+| | | | | | | | | | Expression4
+| | | | | | | | | | | Expression5
+| | | | | | | | | | | | Expression6
+| | | | | | | | | | | | | Expression7
+| | | | | | | | | | | | | | Value
+| | | | | | | | | | | | | | | Accepted: IntegerLiteral
+| | | | | | | | | | | | | | EndValue
+| | | | | | | | | | | | | EndExpression7
+| | | | | | | | | | | | EndExpression6
+| | | | | | | | | | | EndExpression5
+| | | | | | | | | | EndExpression4
+| | | | | | | | | EndExpression3
+| | | | | | | | EndExpression2
+| | | | | | | EndExpression1
+| | | | | | EndExpression
+| | | | | EndVar
+| | | | EndDelimitedStatement
+| | | | Accepted: Semicolon
+| | | EndStatement
+| | | Statement
+| | | | FreeStatement
+| | | | | If
+| | | | | | Accepted: If
+| | | | | | GroupedExpression
+| | | | | | | Accepted: OpenParentheses
+| | | | | | | Expression
+| | | | | | | | Expression1
+| | | | | | | | | Expression2
+| | | | | | | | | | Expression3
+| | | | | | | | | | | Expression4
+| | | | | | | | | | | | Expression5
+| | | | | | | | | | | | | Expression6
+| | | | | | | | | | | | | | Expression7
+| | | | | | | | | | | | | | | Value
+| | | | | | | | | | | | | | | | Accepted: Identifier
+| | | | | | | | | | | | | | | EndValue
+| | | | | | | | | | | | | | EndExpression7
+| | | | | | | | | | | | | EndExpression6
+| | | | | | | | | | | | EndExpression5
+| | | | | | | | | | | EndExpression4
+| | | | | | | | | | | Accepted: Equality
+| | | | | | | | | | | Expression4
+| | | | | | | | | | | | Expression5
+| | | | | | | | | | | | | Expression6
+| | | | | | | | | | | | | | Expression7
+| | | | | | | | | | | | | | | Value
+| | | | | | | | | | | | | | | | Accepted: IntegerLiteral
+| | | | | | | | | | | | | | | EndValue
+| | | | | | | | | | | | | | EndExpression7
+| | | | | | | | | | | | | EndExpression6
+| | | | | | | | | | | | EndExpression5
+| | | | | | | | | | | EndExpression4
+| | | | | | | | | | EndExpression3
+| | | | | | | | | EndExpression2
+| | | | | | | | EndExpression1
+| | | | | | | EndExpression
+| | | | | | | Accepted: CloseParentheses
+| | | | | | EndGroupedExpression
+| | | | | | Scope
+| | | | | | | Accepted: OpenCurley
+| | | | | | | Accepted: CloseCurley
+| | | | | | EndScope
+| | | | | | Else
+| | | | | | | Accepted: Else
+| | | | | | | If
+| | | | | | | | Accepted: If
+| | | | | | | | GroupedExpression
+| | | | | | | | | Accepted: OpenParentheses
+| | | | | | | | | Expression
+| | | | | | | | | | Expression1
+| | | | | | | | | | | Expression2
+| | | | | | | | | | | | Expression3
+| | | | | | | | | | | | | Expression4
+| | | | | | | | | | | | | | Expression5
+| | | | | | | | | | | | | | | Expression6
+| | | | | | | | | | | | | | | | Expression7
+| | | | | | | | | | | | | | | | | Value
+| | | | | | | | | | | | | | | | | | Accepted: Identifier
+| | | | | | | | | | | | | | | | | EndValue
+| | | | | | | | | | | | | | | | EndExpression7
+| | | | | | | | | | | | | | | EndExpression6
+| | | | | | | | | | | | | | EndExpression5
+| | | | | | | | | | | | | EndExpression4
+| | | | | | | | | | | | | Accepted: Equality
+| | | | | | | | | | | | | Expression4
+| | | | | | | | | | | | | | Expression5
+| | | | | | | | | | | | | | | Expression6
+| | | | | | | | | | | | | | | | Expression7
+| | | | | | | | | | | | | | | | | Value
+| | | | | | | | | | | | | | | | | | Accepted: IntegerLiteral
+| | | | | | | | | | | | | | | | | EndValue
+| | | | | | | | | | | | | | | | EndExpression7
+| | | | | | | | | | | | | | | EndExpression6
+| | | | | | | | | | | | | | EndExpression5
+| | | | | | | | | | | | | EndExpression4
+| | | | | | | | | | | | EndExpression3
+| | | | | | | | | | | EndExpression2
+| | | | | | | | | | EndExpression1
+| | | | | | | | | EndExpression
+| | | | | | | | | Accepted: CloseParentheses
+| | | | | | | | EndGroupedExpression
+| | | | | | | | Scope
+| | | | | | | | | Accepted: OpenCurley
+| | | | | | | | | Accepted: CloseCurley
+| | | | | | | | EndScope
+| | | | | | | | Else
+| | | | | | | | | Accepted: Else
+| | | | | | | | | Scope
+| | | | | | | | | | Accepted: OpenCurley
+| | | | | | | | | | Accepted: CloseCurley
+| | | | | | | | | EndScope
+| | | | | | | | EndElse
+| | | | | | | EndIf
+| | | | | | EndElse
+| | | | | EndIf
+| | | | EndFreeStatement
+| | | EndStatement
+| | | Accepted: CloseCurley
+| | EndScope
+| EndFunction
+EndBlock
+
+Parsing Successful
+
+BlockNode
+| FunctionNode(DoSomething)
+| | ScopeNode
+| | | VariableNode(b)
+| | | | TypeNode(Integer,0)
+| | | | ValueNode(20)
+| | | IfNode
+| | | | BinaryOperatorNode(==)
+| | | | | ValueNode(b)
+| | | | | ValueNode(10)
+| | | | ScopeNode
+| | | | IfNode
+| | | | | BinaryOperatorNode(==)
+| | | | | | ValueNode(b)
+| | | | | | ValueNode(20)
+| | | | | ScopeNode
+| | | | | IfNode
+| | | | | | ScopeNode
+*******************************************
+
+************** PART 2 TEST 16 **************
+Token: 'class' of type 70 (Class)
+Token: ' ' of type 6 (Whitespace)
+Token: 'Player' of type 1 (Identifier)
+Token: '\n' of type 6 (Whitespace)
+Token: '{' of type 10 (OpenCurley)
+Token: '\n  ' of type 6 (Whitespace)
+Token: 'var' of type 152 (Var)
+Token: ' ' of type 6 (Whitespace)
+Token: 'Lives' of type 1 (Identifier)
+Token: ' ' of type 6 (Whitespace)
+Token: ':' of type 17 (Colon)
+Token: ' ' of type 6 (Whitespace)
+Token: 'Integer' of type 1 (Identifier)
+Token: ' ' of type 6 (Whitespace)
+Token: '=' of type 23 (Assignment)
+Token: ' ' of type 6 (Whitespace)
+Token: '9' of type 2 (IntegerLiteral)
+Token: ';' of type 16 (Semicolon)
+Token: '\n  ' of type 6 (Whitespace)
+Token: 'var' of type 152 (Var)
+Token: ' ' of type 6 (Whitespace)
+Token: 'Health' of type 1 (Identifier)
+Token: ' ' of type 6 (Whitespace)
+Token: ':' of type 17 (Colon)
+Token: ' ' of type 6 (Whitespace)
+Token: 'Float' of type 1 (Identifier)
+Token: ' ' of type 6 (Whitespace)
+Token: '=' of type 23 (Assignment)
+Token: ' ' of type 6 (Whitespace)
+Token: '100.0f' of type 3 (FloatLiteral)
+Token: ';' of type 16 (Semicolon)
+Token: '\n  ' of type 6 (Whitespace)
+Token: 'function' of type 96 (Function)
+Token: ' ' of type 6 (Whitespace)
+Token: 'ApplyDamage' of type 1 (Identifier)
+Token: '(' of type 12 (OpenParentheses)
+Token: 'amount' of type 1 (Identifier)
+Token: ' ' of type 6 (Whitespace)
+Token: ':' of type 17 (Colon)
+Token: ' ' of type 6 (Whitespace)
+Token: 'Float' of type 1 (Identifier)
+Token: ')' of type 13 (CloseParentheses)
+Token: ' ' of type 6 (Whitespace)
+Token: ':' of type 17 (Colon)
+Token: ' ' of type 6 (Whitespace)
+Token: 'Void' of type 1 (Identifier)
+Token: '\n  ' of type 6 (Whitespace)
+Token: '{' of type 10 (OpenCurley)
+Token: '\n    ' of type 6 (Whitespace)
+Token: 'this' of type 1 (Identifier)
+Token: '.' of type 21 (Dot)
+Token: 'Health' of type 1 (Identifier)
+Token: ' ' of type 6 (Whitespace)
+Token: '-=' of type 47 (AssignmentMinus)
+Token: ' ' of type 6 (Whitespace)
+Token: 'amount' of type 1 (Identifier)
+Token: ';' of type 16 (Semicolon)
+Token: '\n    ' of type 6 (Whitespace)
+Token: 'if' of type 100 (If)
+Token: ' ' of type 6 (Whitespace)
+Token: '(' of type 12 (OpenParentheses)
+Token: 'this' of type 1 (Identifier)
+Token: '.' of type 21 (Dot)
+Token: 'Health' of type 1 (Identifier)
+Token: ' ' of type 6 (Whitespace)
+Token: '<=' of type 25 (LessThanOrEqualTo)
+Token: ' ' of type 6 (Whitespace)
+Token: '0.0f' of type 3 (FloatLiteral)
+Token: ')' of type 13 (CloseParentheses)
+Token: '\n    ' of type 6 (Whitespace)
+Token: '{' of type 10 (OpenCurley)
+Token: '\n      ' of type 6 (Whitespace)
+Token: '--' of type 31 (Decrement)
+Token: 'this' of type 1 (Identifier)
+Token: '.' of type 21 (Dot)
+Token: 'Lives' of type 1 (Identifier)
+Token: ';' of type 16 (Semicolon)
+Token: '\n      ' of type 6 (Whitespace)
+Token: 'this' of type 1 (Identifier)
+Token: '.' of type 21 (Dot)
+Token: 'Health' of type 1 (Identifier)
+Token: ' ' of type 6 (Whitespace)
+Token: '=' of type 23 (Assignment)
+Token: ' ' of type 6 (Whitespace)
+Token: '100.0f' of type 3 (FloatLiteral)
+Token: ';' of type 16 (Semicolon)
+Token: '\n      ' of type 6 (Whitespace)
+Token: 'this' of type 1 (Identifier)
+Token: '.' of type 21 (Dot)
+Token: 'SendDeathEvent' of type 1 (Identifier)
+Token: '(' of type 12 (OpenParentheses)
+Token: ')' of type 13 (CloseParentheses)
+Token: ';' of type 16 (Semicolon)
+Token: '\n    ' of type 6 (Whitespace)
+Token: '}' of type 11 (CloseCurley)
+Token: '\n  ' of type 6 (Whitespace)
+Token: '}' of type 11 (CloseCurley)
+Token: '\n  ' of type 6 (Whitespace)
+Token: 'function' of type 96 (Function)
+Token: ' ' of type 6 (Whitespace)
+Token: 'SendDeathEvent' of type 1 (Identifier)
+Token: '(' of type 12 (OpenParentheses)
+Token: ')' of type 13 (CloseParentheses)
+Token: '\n  ' of type 6 (Whitespace)
+Token: '{' of type 10 (OpenCurley)
+Token: '\n    ' of type 6 (Whitespace)
+Token: '// Not implemented yet\n' of type 7 (SingleLineComment)
+Token: '  ' of type 6 (Whitespace)
+Token: '}' of type 11 (CloseCurley)
+Token: '\n' of type 6 (Whitespace)
+Token: '}' of type 11 (CloseCurley)
+Token: '\n' of type 6 (Whitespace)
+Block
+| Class
+| | Accepted: Class
+| | Accepted: Identifier
+| | Accepted: OpenCurley
+| | Var
+| | | Accepted: Var
+| | | Accepted: Identifier
+| | | SpecifiedType
+| | | | Accepted: Colon
+| | | | Type
+| | | | | Accepted: Identifier
+| | | | EndType
+| | | EndSpecifiedType
+| | | Accepted: Assignment
+| | | Expression
+| | | | Expression1
+| | | | | Expression2
+| | | | | | Expression3
+| | | | | | | Expression4
+| | | | | | | | Expression5
+| | | | | | | | | Expression6
+| | | | | | | | | | Expression7
+| | | | | | | | | | | Value
+| | | | | | | | | | | | Accepted: IntegerLiteral
+| | | | | | | | | | | EndValue
+| | | | | | | | | | EndExpression7
+| | | | | | | | | EndExpression6
+| | | | | | | | EndExpression5
+| | | | | | | EndExpression4
+| | | | | | EndExpression3
+| | | | | EndExpression2
+| | | | EndExpression1
+| | | EndExpression
+| | EndVar
+| | Accepted: Semicolon
+| | Var
+| | | Accepted: Var
+| | | Accepted: Identifier
+| | | SpecifiedType
+| | | | Accepted: Colon
+| | | | Type
+| | | | | Accepted: Identifier
+| | | | EndType
+| | | EndSpecifiedType
+| | | Accepted: Assignment
+| | | Expression
+| | | | Expression1
+| | | | | Expression2
+| | | | | | Expression3
+| | | | | | | Expression4
+| | | | | | | | Expression5
+| | | | | | | | | Expression6
+| | | | | | | | | | Expression7
+| | | | | | | | | | | Value
+| | | | | | | | | | | | Accepted: FloatLiteral
+| | | | | | | | | | | EndValue
+| | | | | | | | | | EndExpression7
+| | | | | | | | | EndExpression6
+| | | | | | | | EndExpression5
+| | | | | | | EndExpression4
+| | | | | | EndExpression3
+| | | | | EndExpression2
+| | | | EndExpression1
+| | | EndExpression
+| | EndVar
+| | Accepted: Semicolon
+| | Function
+| | | Accepted: Function
+| | | Accepted: Identifier
+| | | Accepted: OpenParentheses
+| | | Parameter
+| | | | Accepted: Identifier
+| | | | SpecifiedType
+| | | | | Accepted: Colon
+| | | | | Type
+| | | | | | Accepted: Identifier
+| | | | | EndType
+| | | | EndSpecifiedType
+| | | EndParameter
+| | | Accepted: CloseParentheses
+| | | SpecifiedType
+| | | | Accepted: Colon
+| | | | Type
+| | | | | Accepted: Identifier
+| | | | EndType
+| | | EndSpecifiedType
+| | | Scope
+| | | | Accepted: OpenCurley
+| | | | Statement
+| | | | | DelimitedStatement
+| | | | | | Expression
+| | | | | | | Expression1
+| | | | | | | | Expression2
+| | | | | | | | | Expression3
+| | | | | | | | | | Expression4
+| | | | | | | | | | | Expression5
+| | | | | | | | | | | | Expression6
+| | | | | | | | | | | | | Expression7
+| | | | | | | | | | | | | | Value
+| | | | | | | | | | | | | | | Accepted: Identifier
+| | | | | | | | | | | | | | EndValue
+| | | | | | | | | | | | | | MemberAccess
+| | | | | | | | | | | | | | | Accepted: Dot
+| | | | | | | | | | | | | | | Accepted: Identifier
+| | | | | | | | | | | | | | EndMemberAccess
+| | | | | | | | | | | | | EndExpression7
+| | | | | | | | | | | | EndExpression6
+| | | | | | | | | | | EndExpression5
+| | | | | | | | | | EndExpression4
+| | | | | | | | | EndExpression3
+| | | | | | | | EndExpression2
+| | | | | | | EndExpression1
+| | | | | | | Accepted: AssignmentMinus
+| | | | | | | Expression
+| | | | | | | | Expression1
+| | | | | | | | | Expression2
+| | | | | | | | | | Expression3
+| | | | | | | | | | | Expression4
+| | | | | | | | | | | | Expression5
+| | | | | | | | | | | | | Expression6
+| | | | | | | | | | | | | | Expression7
+| | | | | | | | | | | | | | | Value
+| | | | | | | | | | | | | | | | Accepted: Identifier
+| | | | | | | | | | | | | | | EndValue
+| | | | | | | | | | | | | | EndExpression7
+| | | | | | | | | | | | | EndExpression6
+| | | | | | | | | | | | EndExpression5
+| | | | | | | | | | | EndExpression4
+| | | | | | | | | | EndExpression3
+| | | | | | | | | EndExpression2
+| | | | | | | | EndExpression1
+| | | | | | | EndExpression
+| | | | | | EndExpression
+| | | | | EndDelimitedStatement
+| | | | | Accepted: Semicolon
+| | | | EndStatement
+| | | | Statement
+| | | | | FreeStatement
+| | | | | | If
+| | | | | | | Accepted: If
+| | | | | | | GroupedExpression
+| | | | | | | | Accepted: OpenParentheses
+| | | | | | | | Expression
+| | | | | | | | | Expression1
+| | | | | | | | | | Expression2
+| | | | | | | | | | | Expression3
+| | | | | | | | | | | | Expression4
+| | | | | | | | | | | | | Expression5
+| | | | | | | | | | | | | | Expression6
+| | | | | | | | | | | | | | | Expression7
+| | | | | | | | | | | | | | | | Value
+| | | | | | | | | | | | | | | | | Accepted: Identifier
+| | | | | | | | | | | | | | | | EndValue
+| | | | | | | | | | | | | | | | MemberAccess
+| | | | | | | | | | | | | | | | | Accepted: Dot
+| | | | | | | | | | | | | | | | | Accepted: Identifier
+| | | | | | | | | | | | | | | | EndMemberAccess
+| | | | | | | | | | | | | | | EndExpression7
+| | | | | | | | | | | | | | EndExpression6
+| | | | | | | | | | | | | EndExpression5
+| | | | | | | | | | | | EndExpression4
+| | | | | | | | | | | | Accepted: LessThanOrEqualTo
+| | | | | | | | | | | | Expression4
+| | | | | | | | | | | | | Expression5
+| | | | | | | | | | | | | | Expression6
+| | | | | | | | | | | | | | | Expression7
+| | | | | | | | | | | | | | | | Value
+| | | | | | | | | | | | | | | | | Accepted: FloatLiteral
+| | | | | | | | | | | | | | | | EndValue
+| | | | | | | | | | | | | | | EndExpression7
+| | | | | | | | | | | | | | EndExpression6
+| | | | | | | | | | | | | EndExpression5
+| | | | | | | | | | | | EndExpression4
+| | | | | | | | | | | EndExpression3
+| | | | | | | | | | EndExpression2
+| | | | | | | | | EndExpression1
+| | | | | | | | EndExpression
+| | | | | | | | Accepted: CloseParentheses
+| | | | | | | EndGroupedExpression
+| | | | | | | Scope
+| | | | | | | | Accepted: OpenCurley
+| | | | | | | | Statement
+| | | | | | | | | DelimitedStatement
+| | | | | | | | | | Expression
+| | | | | | | | | | | Expression1
+| | | | | | | | | | | | Expression2
+| | | | | | | | | | | | | Expression3
+| | | | | | | | | | | | | | Expression4
+| | | | | | | | | | | | | | | Expression5
+| | | | | | | | | | | | | | | | Expression6
+| | | | | | | | | | | | | | | | | Accepted: Decrement
+| | | | | | | | | | | | | | | | | Expression7
+| | | | | | | | | | | | | | | | | | Value
+| | | | | | | | | | | | | | | | | | | Accepted: Identifier
+| | | | | | | | | | | | | | | | | | EndValue
+| | | | | | | | | | | | | | | | | | MemberAccess
+| | | | | | | | | | | | | | | | | | | Accepted: Dot
+| | | | | | | | | | | | | | | | | | | Accepted: Identifier
+| | | | | | | | | | | | | | | | | | EndMemberAccess
+| | | | | | | | | | | | | | | | | EndExpression7
+| | | | | | | | | | | | | | | | EndExpression6
+| | | | | | | | | | | | | | | EndExpression5
+| | | | | | | | | | | | | | EndExpression4
+| | | | | | | | | | | | | EndExpression3
+| | | | | | | | | | | | EndExpression2
+| | | | | | | | | | | EndExpression1
+| | | | | | | | | | EndExpression
+| | | | | | | | | EndDelimitedStatement
+| | | | | | | | | Accepted: Semicolon
+| | | | | | | | EndStatement
+| | | | | | | | Statement
+| | | | | | | | | DelimitedStatement
+| | | | | | | | | | Expression
+| | | | | | | | | | | Expression1
+| | | | | | | | | | | | Expression2
+| | | | | | | | | | | | | Expression3
+| | | | | | | | | | | | | | Expression4
+| | | | | | | | | | | | | | | Expression5
+| | | | | | | | | | | | | | | | Expression6
+| | | | | | | | | | | | | | | | | Expression7
+| | | | | | | | | | | | | | | | | | Value
+| | | | | | | | | | | | | | | | | | | Accepted: Identifier
+| | | | | | | | | | | | | | | | | | EndValue
+| | | | | | | | | | | | | | | | | | MemberAccess
+| | | | | | | | | | | | | | | | | | | Accepted: Dot
+| | | | | | | | | | | | | | | | | | | Accepted: Identifier
+| | | | | | | | | | | | | | | | | | EndMemberAccess
+| | | | | | | | | | | | | | | | | EndExpression7
+| | | | | | | | | | | | | | | | EndExpression6
+| | | | | | | | | | | | | | | EndExpression5
+| | | | | | | | | | | | | | EndExpression4
+| | | | | | | | | | | | | EndExpression3
+| | | | | | | | | | | | EndExpression2
+| | | | | | | | | | | EndExpression1
+| | | | | | | | | | | Accepted: Assignment
+| | | | | | | | | | | Expression
+| | | | | | | | | | | | Expression1
+| | | | | | | | | | | | | Expression2
+| | | | | | | | | | | | | | Expression3
+| | | | | | | | | | | | | | | Expression4
+| | | | | | | | | | | | | | | | Expression5
+| | | | | | | | | | | | | | | | | Expression6
+| | | | | | | | | | | | | | | | | | Expression7
+| | | | | | | | | | | | | | | | | | | Value
+| | | | | | | | | | | | | | | | | | | | Accepted: FloatLiteral
+| | | | | | | | | | | | | | | | | | | EndValue
+| | | | | | | | | | | | | | | | | | EndExpression7
+| | | | | | | | | | | | | | | | | EndExpression6
+| | | | | | | | | | | | | | | | EndExpression5
+| | | | | | | | | | | | | | | EndExpression4
+| | | | | | | | | | | | | | EndExpression3
+| | | | | | | | | | | | | EndExpression2
+| | | | | | | | | | | | EndExpression1
+| | | | | | | | | | | EndExpression
+| | | | | | | | | | EndExpression
+| | | | | | | | | EndDelimitedStatement
+| | | | | | | | | Accepted: Semicolon
+| | | | | | | | EndStatement
+| | | | | | | | Statement
+| | | | | | | | | DelimitedStatement
+| | | | | | | | | | Expression
+| | | | | | | | | | | Expression1
+| | | | | | | | | | | | Expression2
+| | | | | | | | | | | | | Expression3
+| | | | | | | | | | | | | | Expression4
+| | | | | | | | | | | | | | | Expression5
+| | | | | | | | | | | | | | | | Expression6
+| | | | | | | | | | | | | | | | | Expression7
+| | | | | | | | | | | | | | | | | | Value
+| | | | | | | | | | | | | | | | | | | Accepted: Identifier
+| | | | | | | | | | | | | | | | | | EndValue
+| | | | | | | | | | | | | | | | | | MemberAccess
+| | | | | | | | | | | | | | | | | | | Accepted: Dot
+| | | | | | | | | | | | | | | | | | | Accepted: Identifier
+| | | | | | | | | | | | | | | | | | EndMemberAccess
+| | | | | | | | | | | | | | | | | | Call
+| | | | | | | | | | | | | | | | | | | Accepted: OpenParentheses
+| | | | | | | | | | | | | | | | | | | Accepted: CloseParentheses
+| | | | | | | | | | | | | | | | | | EndCall
+| | | | | | | | | | | | | | | | | EndExpression7
+| | | | | | | | | | | | | | | | EndExpression6
+| | | | | | | | | | | | | | | EndExpression5
+| | | | | | | | | | | | | | EndExpression4
+| | | | | | | | | | | | | EndExpression3
+| | | | | | | | | | | | EndExpression2
+| | | | | | | | | | | EndExpression1
+| | | | | | | | | | EndExpression
+| | | | | | | | | EndDelimitedStatement
+| | | | | | | | | Accepted: Semicolon
+| | | | | | | | EndStatement
+| | | | | | | | Accepted: CloseCurley
+| | | | | | | EndScope
+| | | | | | EndIf
+| | | | | EndFreeStatement
+| | | | EndStatement
+| | | | Accepted: CloseCurley
+| | | EndScope
+| | EndFunction
+| | Function
+| | | Accepted: Function
+| | | Accepted: Identifier
+| | | Accepted: OpenParentheses
+| | | Accepted: CloseParentheses
+| | | Scope
+| | | | Accepted: OpenCurley
+| | | | Accepted: CloseCurley
+| | | EndScope
+| | EndFunction
+| | Accepted: CloseCurley
+| EndClass
+EndBlock
+
+Parsing Successful
+
+BlockNode
+| ClassNode(Player)
+| | VariableNode(Lives)
+| | | TypeNode(Integer,0)
+| | | ValueNode(9)
+| | VariableNode(Health)
+| | | TypeNode(Float,0)
+| | | ValueNode(100.0f)
+| | FunctionNode(ApplyDamage)
+| | | ParameterNode(amount)
+| | | | TypeNode(Float,0)
+| | | TypeNode(Void,0)
+| | | ScopeNode
+| | | | BinaryOperatorNode(-=)
+| | | | | MemberAccessNode(.,Health)
+| | | | | | ValueNode(this)
+| | | | | ValueNode(amount)
+| | | | IfNode
+| | | | | BinaryOperatorNode(<=)
+| | | | | | MemberAccessNode(.,Health)
+| | | | | | | ValueNode(this)
+| | | | | | ValueNode(0.0f)
+| | | | | ScopeNode
+| | | | | | UnaryOperatorNode(--)
+| | | | | | | MemberAccessNode(.,Lives)
+| | | | | | | | ValueNode(this)
+| | | | | | BinaryOperatorNode(=)
+| | | | | | | MemberAccessNode(.,Health)
+| | | | | | | | ValueNode(this)
+| | | | | | | ValueNode(100.0f)
+| | | | | | CallNode
+| | | | | | | MemberAccessNode(.,SendDeathEvent)
+| | | | | | | | ValueNode(this)
+| | FunctionNode(SendDeathEvent)
+| | | ScopeNode
+*******************************************
+
+************** PART 2 TEST 17 **************
+Token: 'class' of type 70 (Class)
+Token: ' ' of type 6 (Whitespace)
+Token: 'Player' of type 1 (Identifier)
+Token: '\n' of type 6 (Whitespace)
+Token: '{' of type 10 (OpenCurley)
+Token: '\n  ' of type 6 (Whitespace)
+Token: 'var' of type 152 (Var)
+Token: ' ' of type 6 (Whitespace)
+Token: 'Lives' of type 1 (Identifier)
+Token: ' ' of type 6 (Whitespace)
+Token: ':' of type 17 (Colon)
+Token: ' ' of type 6 (Whitespace)
+Token: 'Integer' of type 1 (Identifier)
+Token: ' ' of type 6 (Whitespace)
+Token: '=' of type 23 (Assignment)
+Token: ' ' of type 6 (Whitespace)
+Token: '9' of type 2 (IntegerLiteral)
+Token: ' ' of type 6 (Whitespace)
+Token: '*' of type 41 (Asterisk)
+Token: ' ' of type 6 (Whitespace)
+Token: '1' of type 2 (IntegerLiteral)
+Token: ' ' of type 6 (Whitespace)
+Token: '+' of type 39 (Plus)
+Token: ' ' of type 6 (Whitespace)
+Token: '0' of type 2 (IntegerLiteral)
+Token: ';' of type 16 (Semicolon)
+Token: '\n  ' of type 6 (Whitespace)
+Token: 'var' of type 152 (Var)
+Token: ' ' of type 6 (Whitespace)
+Token: 'Health' of type 1 (Identifier)
+Token: ' ' of type 6 (Whitespace)
+Token: ':' of type 17 (Colon)
+Token: ' ' of type 6 (Whitespace)
+Token: 'Float' of type 1 (Identifier)
+Token: ' ' of type 6 (Whitespace)
+Token: '=' of type 23 (Assignment)
+Token: ' ' of type 6 (Whitespace)
+Token: '100.0f' of type 3 (FloatLiteral)
+Token: ';' of type 16 (Semicolon)
+Token: '\n  ' of type 6 (Whitespace)
+Token: 'function' of type 96 (Function)
+Token: ' ' of type 6 (Whitespace)
+Token: 'ApplyDamage' of type 1 (Identifier)
+Token: '(' of type 12 (OpenParentheses)
+Token: 'amount' of type 1 (Identifier)
+Token: ' ' of type 6 (Whitespace)
+Token: ':' of type 17 (Colon)
+Token: ' ' of type 6 (Whitespace)
+Token: 'Float' of type 1 (Identifier)
+Token: ')' of type 13 (CloseParentheses)
+Token: ' ' of type 6 (Whitespace)
+Token: ':' of type 17 (Colon)
+Token: ' ' of type 6 (Whitespace)
+Token: 'Boolean' of type 1 (Identifier)
+Token: '\n  ' of type 6 (Whitespace)
+Token: '{' of type 10 (OpenCurley)
+Token: '\n    ' of type 6 (Whitespace)
+Token: 'this' of type 1 (Identifier)
+Token: '.' of type 21 (Dot)
+Token: 'Health' of type 1 (Identifier)
+Token: ' ' of type 6 (Whitespace)
+Token: '-=' of type 47 (AssignmentMinus)
+Token: ' ' of type 6 (Whitespace)
+Token: 'amount' of type 1 (Identifier)
+Token: ';' of type 16 (Semicolon)
+Token: '\n    ' of type 6 (Whitespace)
+Token: 'if' of type 100 (If)
+Token: ' ' of type 6 (Whitespace)
+Token: '(' of type 12 (OpenParentheses)
+Token: 'this' of type 1 (Identifier)
+Token: '.' of type 21 (Dot)
+Token: 'Health' of type 1 (Identifier)
+Token: ' ' of type 6 (Whitespace)
+Token: '<=' of type 25 (LessThanOrEqualTo)
+Token: ' ' of type 6 (Whitespace)
+Token: '0.0f' of type 3 (FloatLiteral)
+Token: ')' of type 13 (CloseParentheses)
+Token: '\n    ' of type 6 (Whitespace)
+Token: '{' of type 10 (OpenCurley)
+Token: '\n      ' of type 6 (Whitespace)
+Token: '--' of type 31 (Decrement)
+Token: 'this' of type 1 (Identifier)
+Token: '.' of type 21 (Dot)
+Token: 'Lives' of type 1 (Identifier)
+Token: ';' of type 16 (Semicolon)
+Token: '\n      ' of type 6 (Whitespace)
+Token: 'this' of type 1 (Identifier)
+Token: '.' of type 21 (Dot)
+Token: 'Health' of type 1 (Identifier)
+Token: ' ' of type 6 (Whitespace)
+Token: '=' of type 23 (Assignment)
+Token: ' ' of type 6 (Whitespace)
+Token: '100.0f' of type 3 (FloatLiteral)
+Token: ';' of type 16 (Semicolon)
+Token: '\n      ' of type 6 (Whitespace)
+Token: 'this' of type 1 (Identifier)
+Token: '.' of type 21 (Dot)
+Token: 'SendDeathEvent' of type 1 (Identifier)
+Token: '(' of type 12 (OpenParentheses)
+Token: ')' of type 13 (CloseParentheses)
+Token: ';' of type 16 (Semicolon)
+Token: '\n      ' of type 6 (Whitespace)
+Token: 'goto' of type 99 (Goto)
+Token: ' ' of type 6 (Whitespace)
+Token: 'End' of type 1 (Identifier)
+Token: ';' of type 16 (Semicolon)
+Token: '\n    ' of type 6 (Whitespace)
+Token: '}' of type 11 (CloseCurley)
+Token: '\n    ' of type 6 (Whitespace)
+Token: 'else' of type 84 (Else)
+Token: '\n    ' of type 6 (Whitespace)
+Token: '{' of type 10 (OpenCurley)
+Token: '\n      ' of type 6 (Whitespace)
+Token: 'while' of type 155 (While)
+Token: ' ' of type 6 (Whitespace)
+Token: '(' of type 12 (OpenParentheses)
+Token: 'this' of type 1 (Identifier)
+Token: '.' of type 21 (Dot)
+Token: 'Health' of type 1 (Identifier)
+Token: ' ' of type 6 (Whitespace)
+Token: '<' of type 24 (LessThan)
+Token: ' ' of type 6 (Whitespace)
+Token: '50.0f' of type 3 (FloatLiteral)
+Token: ')' of type 13 (CloseParentheses)
+Token: '\n      ' of type 6 (Whitespace)
+Token: '{' of type 10 (OpenCurley)
+Token: '\n        ' of type 6 (Whitespace)
+Token: 'this' of type 1 (Identifier)
+Token: '.' of type 21 (Dot)
+Token: 'Health' of type 1 (Identifier)
+Token: ' ' of type 6 (Whitespace)
+Token: '+=' of type 46 (AssignmentPlus)
+Token: ' ' of type 6 (Whitespace)
+Token: '1.0f' of type 3 (FloatLiteral)
+Token: ' ' of type 6 (Whitespace)
+Token: '*' of type 41 (Asterisk)
+Token: ' ' of type 6 (Whitespace)
+Token: '2' of type 2 (IntegerLiteral)
+Token: ';' of type 16 (Semicolon)
+Token: '\n        ' of type 6 (Whitespace)
+Token: 'if' of type 100 (If)
+Token: ' ' of type 6 (Whitespace)
+Token: '(' of type 12 (OpenParentheses)
+Token: 'this' of type 1 (Identifier)
+Token: '.' of type 21 (Dot)
+Token: 'Health' of type 1 (Identifier)
+Token: ' ' of type 6 (Whitespace)
+Token: 'as' of type 62 (As)
+Token: ' ' of type 6 (Whitespace)
+Token: 'Integer' of type 1 (Identifier)
+Token: ' ' of type 6 (Whitespace)
+Token: '%' of type 43 (Modulo)
+Token: ' ' of type 6 (Whitespace)
+Token: '2' of type 2 (IntegerLiteral)
+Token: ' ' of type 6 (Whitespace)
+Token: '==' of type 28 (Equality)
+Token: ' ' of type 6 (Whitespace)
+Token: '0' of type 2 (IntegerLiteral)
+Token: ')' of type 13 (CloseParentheses)
+Token: '\n        ' of type 6 (Whitespace)
+Token: '{' of type 10 (OpenCurley)
+Token: '\n          ' of type 6 (Whitespace)
+Token: 'continue' of type 76 (Continue)
+Token: ';' of type 16 (Semicolon)
+Token: '\n        ' of type 6 (Whitespace)
+Token: '}' of type 11 (CloseCurley)
+Token: '\n        ' of type 6 (Whitespace)
+Token: 'this' of type 1 (Identifier)
+Token: '.' of type 21 (Dot)
+Token: 'Health' of type 1 (Identifier)
+Token: ' ' of type 6 (Whitespace)
+Token: '*=' of type 48 (AssignmentMultiply)
+Token: ' ' of type 6 (Whitespace)
+Token: '1.1f' of type 3 (FloatLiteral)
+Token: ';' of type 16 (Semicolon)
+Token: '        ' of type 6 (Whitespace)
+Token: 'if' of type 100 (If)
+Token: ' ' of type 6 (Whitespace)
+Token: '(' of type 12 (OpenParentheses)
+Token: 'this' of type 1 (Identifier)
+Token: '.' of type 21 (Dot)
+Token: 'Health' of type 1 (Identifier)
+Token: ' ' of type 6 (Whitespace)
+Token: '>' of type 26 (GreaterThan)
+Token: ' ' of type 6 (Whitespace)
+Token: '30.0f' of type 3 (FloatLiteral)
+Token: ')' of type 13 (CloseParentheses)
+Token: '\n        ' of type 6 (Whitespace)
+Token: '{' of type 10 (OpenCurley)
+Token: '\n          ' of type 6 (Whitespace)
+Token: 'break' of type 66 (Break)
+Token: ';' of type 16 (Semicolon)
+Token: '\n        ' of type 6 (Whitespace)
+Token: '}' of type 11 (CloseCurley)
+Token: '\n      ' of type 6 (Whitespace)
+Token: '}' of type 11 (CloseCurley)
+Token: '\n      ' of type 6 (Whitespace)
+Token: 'return' of type 129 (Return)
+Token: ' ' of type 6 (Whitespace)
+Token: 'false' of type 90 (False)
+Token: ';' of type 16 (Semicolon)
+Token: '\n    ' of type 6 (Whitespace)
+Token: '}' of type 11 (CloseCurley)
+Token: '\n    ' of type 6 (Whitespace)
+Token: 'label' of type 108 (Label)
+Token: ' ' of type 6 (Whitespace)
+Token: 'End' of type 1 (Identifier)
+Token: ';' of type 16 (Semicolon)
+Token: '\n    ' of type 6 (Whitespace)
+Token: 'return' of type 129 (Return)
+Token: ' ' of type 6 (Whitespace)
+Token: 'true' of type 142 (True)
+Token: ';' of type 16 (Semicolon)
+Token: '\n  ' of type 6 (Whitespace)
+Token: '}' of type 11 (CloseCurley)
+Token: '\n  ' of type 6 (Whitespace)
+Token: 'function' of type 96 (Function)
+Token: ' ' of type 6 (Whitespace)
+Token: 'SendDeathEvent' of type 1 (Identifier)
+Token: '(' of type 12 (OpenParentheses)
+Token: ')' of type 13 (CloseParentheses)
+Token: '\n  ' of type 6 (Whitespace)
+Token: '{' of type 10 (OpenCurley)
+Token: '\n    ' of type 6 (Whitespace)
+Token: '// Not implemented yet\n' of type 7 (SingleLineComment)
+Token: '  ' of type 6 (Whitespace)
+Token: '}' of type 11 (CloseCurley)
+Token: '\n' of type 6 (Whitespace)
+Token: '}' of type 11 (CloseCurley)
+Token: '\n' of type 6 (Whitespace)
+Block
+| Class
+| | Accepted: Class
+| | Accepted: Identifier
+| | Accepted: OpenCurley
+| | Var
+| | | Accepted: Var
+| | | Accepted: Identifier
+| | | SpecifiedType
+| | | | Accepted: Colon
+| | | | Type
+| | | | | Accepted: Identifier
+| | | | EndType
+| | | EndSpecifiedType
+| | | Accepted: Assignment
+| | | Expression
+| | | | Expression1
+| | | | | Expression2
+| | | | | | Expression3
+| | | | | | | Expression4
+| | | | | | | | Expression5
+| | | | | | | | | Expression6
+| | | | | | | | | | Expression7
+| | | | | | | | | | | Value
+| | | | | | | | | | | | Accepted: IntegerLiteral
+| | | | | | | | | | | EndValue
+| | | | | | | | | | EndExpression7
+| | | | | | | | | EndExpression6
+| | | | | | | | | Accepted: Asterisk
+| | | | | | | | | Expression6
+| | | | | | | | | | Expression7
+| | | | | | | | | | | Value
+| | | | | | | | | | | | Accepted: IntegerLiteral
+| | | | | | | | | | | EndValue
+| | | | | | | | | | EndExpression7
+| | | | | | | | | EndExpression6
+| | | | | | | | EndExpression5
+| | | | | | | | Accepted: Plus
+| | | | | | | | Expression5
+| | | | | | | | | Expression6
+| | | | | | | | | | Expression7
+| | | | | | | | | | | Value
+| | | | | | | | | | | | Accepted: IntegerLiteral
+| | | | | | | | | | | EndValue
+| | | | | | | | | | EndExpression7
+| | | | | | | | | EndExpression6
+| | | | | | | | EndExpression5
+| | | | | | | EndExpression4
+| | | | | | EndExpression3
+| | | | | EndExpression2
+| | | | EndExpression1
+| | | EndExpression
+| | EndVar
+| | Accepted: Semicolon
+| | Var
+| | | Accepted: Var
+| | | Accepted: Identifier
+| | | SpecifiedType
+| | | | Accepted: Colon
+| | | | Type
+| | | | | Accepted: Identifier
+| | | | EndType
+| | | EndSpecifiedType
+| | | Accepted: Assignment
+| | | Expression
+| | | | Expression1
+| | | | | Expression2
+| | | | | | Expression3
+| | | | | | | Expression4
+| | | | | | | | Expression5
+| | | | | | | | | Expression6
+| | | | | | | | | | Expression7
+| | | | | | | | | | | Value
+| | | | | | | | | | | | Accepted: FloatLiteral
+| | | | | | | | | | | EndValue
+| | | | | | | | | | EndExpression7
+| | | | | | | | | EndExpression6
+| | | | | | | | EndExpression5
+| | | | | | | EndExpression4
+| | | | | | EndExpression3
+| | | | | EndExpression2
+| | | | EndExpression1
+| | | EndExpression
+| | EndVar
+| | Accepted: Semicolon
+| | Function
+| | | Accepted: Function
+| | | Accepted: Identifier
+| | | Accepted: OpenParentheses
+| | | Parameter
+| | | | Accepted: Identifier
+| | | | SpecifiedType
+| | | | | Accepted: Colon
+| | | | | Type
+| | | | | | Accepted: Identifier
+| | | | | EndType
+| | | | EndSpecifiedType
+| | | EndParameter
+| | | Accepted: CloseParentheses
+| | | SpecifiedType
+| | | | Accepted: Colon
+| | | | Type
+| | | | | Accepted: Identifier
+| | | | EndType
+| | | EndSpecifiedType
+| | | Scope
+| | | | Accepted: OpenCurley
+| | | | Statement
+| | | | | DelimitedStatement
+| | | | | | Expression
+| | | | | | | Expression1
+| | | | | | | | Expression2
+| | | | | | | | | Expression3
+| | | | | | | | | | Expression4
+| | | | | | | | | | | Expression5
+| | | | | | | | | | | | Expression6
+| | | | | | | | | | | | | Expression7
+| | | | | | | | | | | | | | Value
+| | | | | | | | | | | | | | | Accepted: Identifier
+| | | | | | | | | | | | | | EndValue
+| | | | | | | | | | | | | | MemberAccess
+| | | | | | | | | | | | | | | Accepted: Dot
+| | | | | | | | | | | | | | | Accepted: Identifier
+| | | | | | | | | | | | | | EndMemberAccess
+| | | | | | | | | | | | | EndExpression7
+| | | | | | | | | | | | EndExpression6
+| | | | | | | | | | | EndExpression5
+| | | | | | | | | | EndExpression4
+| | | | | | | | | EndExpression3
+| | | | | | | | EndExpression2
+| | | | | | | EndExpression1
+| | | | | | | Accepted: AssignmentMinus
+| | | | | | | Expression
+| | | | | | | | Expression1
+| | | | | | | | | Expression2
+| | | | | | | | | | Expression3
+| | | | | | | | | | | Expression4
+| | | | | | | | | | | | Expression5
+| | | | | | | | | | | | | Expression6
+| | | | | | | | | | | | | | Expression7
+| | | | | | | | | | | | | | | Value
+| | | | | | | | | | | | | | | | Accepted: Identifier
+| | | | | | | | | | | | | | | EndValue
+| | | | | | | | | | | | | | EndExpression7
+| | | | | | | | | | | | | EndExpression6
+| | | | | | | | | | | | EndExpression5
+| | | | | | | | | | | EndExpression4
+| | | | | | | | | | EndExpression3
+| | | | | | | | | EndExpression2
+| | | | | | | | EndExpression1
+| | | | | | | EndExpression
+| | | | | | EndExpression
+| | | | | EndDelimitedStatement
+| | | | | Accepted: Semicolon
+| | | | EndStatement
+| | | | Statement
+| | | | | FreeStatement
+| | | | | | If
+| | | | | | | Accepted: If
+| | | | | | | GroupedExpression
+| | | | | | | | Accepted: OpenParentheses
+| | | | | | | | Expression
+| | | | | | | | | Expression1
+| | | | | | | | | | Expression2
+| | | | | | | | | | | Expression3
+| | | | | | | | | | | | Expression4
+| | | | | | | | | | | | | Expression5
+| | | | | | | | | | | | | | Expression6
+| | | | | | | | | | | | | | | Expression7
+| | | | | | | | | | | | | | | | Value
+| | | | | | | | | | | | | | | | | Accepted: Identifier
+| | | | | | | | | | | | | | | | EndValue
+| | | | | | | | | | | | | | | | MemberAccess
+| | | | | | | | | | | | | | | | | Accepted: Dot
+| | | | | | | | | | | | | | | | | Accepted: Identifier
+| | | | | | | | | | | | | | | | EndMemberAccess
+| | | | | | | | | | | | | | | EndExpression7
+| | | | | | | | | | | | | | EndExpression6
+| | | | | | | | | | | | | EndExpression5
+| | | | | | | | | | | | EndExpression4
+| | | | | | | | | | | | Accepted: LessThanOrEqualTo
+| | | | | | | | | | | | Expression4
+| | | | | | | | | | | | | Expression5
+| | | | | | | | | | | | | | Expression6
+| | | | | | | | | | | | | | | Expression7
+| | | | | | | | | | | | | | | | Value
+| | | | | | | | | | | | | | | | | Accepted: FloatLiteral
+| | | | | | | | | | | | | | | | EndValue
+| | | | | | | | | | | | | | | EndExpression7
+| | | | | | | | | | | | | | EndExpression6
+| | | | | | | | | | | | | EndExpression5
+| | | | | | | | | | | | EndExpression4
+| | | | | | | | | | | EndExpression3
+| | | | | | | | | | EndExpression2
+| | | | | | | | | EndExpression1
+| | | | | | | | EndExpression
+| | | | | | | | Accepted: CloseParentheses
+| | | | | | | EndGroupedExpression
+| | | | | | | Scope
+| | | | | | | | Accepted: OpenCurley
+| | | | | | | | Statement
+| | | | | | | | | DelimitedStatement
+| | | | | | | | | | Expression
+| | | | | | | | | | | Expression1
+| | | | | | | | | | | | Expression2
+| | | | | | | | | | | | | Expression3
+| | | | | | | | | | | | | | Expression4
+| | | | | | | | | | | | | | | Expression5
+| | | | | | | | | | | | | | | | Expression6
+| | | | | | | | | | | | | | | | | Accepted: Decrement
+| | | | | | | | | | | | | | | | | Expression7
+| | | | | | | | | | | | | | | | | | Value
+| | | | | | | | | | | | | | | | | | | Accepted: Identifier
+| | | | | | | | | | | | | | | | | | EndValue
+| | | | | | | | | | | | | | | | | | MemberAccess
+| | | | | | | | | | | | | | | | | | | Accepted: Dot
+| | | | | | | | | | | | | | | | | | | Accepted: Identifier
+| | | | | | | | | | | | | | | | | | EndMemberAccess
+| | | | | | | | | | | | | | | | | EndExpression7
+| | | | | | | | | | | | | | | | EndExpression6
+| | | | | | | | | | | | | | | EndExpression5
+| | | | | | | | | | | | | | EndExpression4
+| | | | | | | | | | | | | EndExpression3
+| | | | | | | | | | | | EndExpression2
+| | | | | | | | | | | EndExpression1
+| | | | | | | | | | EndExpression
+| | | | | | | | | EndDelimitedStatement
+| | | | | | | | | Accepted: Semicolon
+| | | | | | | | EndStatement
+| | | | | | | | Statement
+| | | | | | | | | DelimitedStatement
+| | | | | | | | | | Expression
+| | | | | | | | | | | Expression1
+| | | | | | | | | | | | Expression2
+| | | | | | | | | | | | | Expression3
+| | | | | | | | | | | | | | Expression4
+| | | | | | | | | | | | | | | Expression5
+| | | | | | | | | | | | | | | | Expression6
+| | | | | | | | | | | | | | | | | Expression7
+| | | | | | | | | | | | | | | | | | Value
+| | | | | | | | | | | | | | | | | | | Accepted: Identifier
+| | | | | | | | | | | | | | | | | | EndValue
+| | | | | | | | | | | | | | | | | | MemberAccess
+| | | | | | | | | | | | | | | | | | | Accepted: Dot
+| | | | | | | | | | | | | | | | | | | Accepted: Identifier
+| | | | | | | | | | | | | | | | | | EndMemberAccess
+| | | | | | | | | | | | | | | | | EndExpression7
+| | | | | | | | | | | | | | | | EndExpression6
+| | | | | | | | | | | | | | | EndExpression5
+| | | | | | | | | | | | | | EndExpression4
+| | | | | | | | | | | | | EndExpression3
+| | | | | | | | | | | | EndExpression2
+| | | | | | | | | | | EndExpression1
+| | | | | | | | | | | Accepted: Assignment
+| | | | | | | | | | | Expression
+| | | | | | | | | | | | Expression1
+| | | | | | | | | | | | | Expression2
+| | | | | | | | | | | | | | Expression3
+| | | | | | | | | | | | | | | Expression4
+| | | | | | | | | | | | | | | | Expression5
+| | | | | | | | | | | | | | | | | Expression6
+| | | | | | | | | | | | | | | | | | Expression7
+| | | | | | | | | | | | | | | | | | | Value
+| | | | | | | | | | | | | | | | | | | | Accepted: FloatLiteral
+| | | | | | | | | | | | | | | | | | | EndValue
+| | | | | | | | | | | | | | | | | | EndExpression7
+| | | | | | | | | | | | | | | | | EndExpression6
+| | | | | | | | | | | | | | | | EndExpression5
+| | | | | | | | | | | | | | | EndExpression4
+| | | | | | | | | | | | | | EndExpression3
+| | | | | | | | | | | | | EndExpression2
+| | | | | | | | | | | | EndExpression1
+| | | | | | | | | | | EndExpression
+| | | | | | | | | | EndExpression
+| | | | | | | | | EndDelimitedStatement
+| | | | | | | | | Accepted: Semicolon
+| | | | | | | | EndStatement
+| | | | | | | | Statement
+| | | | | | | | | DelimitedStatement
+| | | | | | | | | | Expression
+| | | | | | | | | | | Expression1
+| | | | | | | | | | | | Expression2
+| | | | | | | | | | | | | Expression3
+| | | | | | | | | | | | | | Expression4
+| | | | | | | | | | | | | | | Expression5
+| | | | | | | | | | | | | | | | Expression6
+| | | | | | | | | | | | | | | | | Expression7
+| | | | | | | | | | | | | | | | | | Value
+| | | | | | | | | | | | | | | | | | | Accepted: Identifier
+| | | | | | | | | | | | | | | | | | EndValue
+| | | | | | | | | | | | | | | | | | MemberAccess
+| | | | | | | | | | | | | | | | | | | Accepted: Dot
+| | | | | | | | | | | | | | | | | | | Accepted: Identifier
+| | | | | | | | | | | | | | | | | | EndMemberAccess
+| | | | | | | | | | | | | | | | | | Call
+| | | | | | | | | | | | | | | | | | | Accepted: OpenParentheses
+| | | | | | | | | | | | | | | | | | | Accepted: CloseParentheses
+| | | | | | | | | | | | | | | | | | EndCall
+| | | | | | | | | | | | | | | | | EndExpression7
+| | | | | | | | | | | | | | | | EndExpression6
+| | | | | | | | | | | | | | | EndExpression5
+| | | | | | | | | | | | | | EndExpression4
+| | | | | | | | | | | | | EndExpression3
+| | | | | | | | | | | | EndExpression2
+| | | | | | | | | | | EndExpression1
+| | | | | | | | | | EndExpression
+| | | | | | | | | EndDelimitedStatement
+| | | | | | | | | Accepted: Semicolon
+| | | | | | | | EndStatement
+| | | | | | | | Statement
+| | | | | | | | | DelimitedStatement
+| | | | | | | | | | Goto
+| | | | | | | | | | | Accepted: Goto
+| | | | | | | | | | | Accepted: Identifier
+| | | | | | | | | | EndGoto
+| | | | | | | | | EndDelimitedStatement
+| | | | | | | | | Accepted: Semicolon
+| | | | | | | | EndStatement
+| | | | | | | | Accepted: CloseCurley
+| | | | | | | EndScope
+| | | | | | | Else
+| | | | | | | | Accepted: Else
+| | | | | | | | Scope
+| | | | | | | | | Accepted: OpenCurley
+| | | | | | | | | Statement
+| | | | | | | | | | FreeStatement
+| | | | | | | | | | | While
+| | | | | | | | | | | | Accepted: While
+| | | | | | | | | | | | GroupedExpression
+| | | | | | | | | | | | | Accepted: OpenParentheses
+| | | | | | | | | | | | | Expression
+| | | | | | | | | | | | | | Expression1
+| | | | | | | | | | | | | | | Expression2
+| | | | | | | | | | | | | | | | Expression3
+| | | | | | | | | | | | | | | | | Expression4
+| | | | | | | | | | | | | | | | | | Expression5
+| | | | | | | | | | | | | | | | | | | Expression6
+| | | | | | | | | | | | | | | | | | | | Expression7
+| | | | | | | | | | | | | | | | | | | | | Value
+| | | | | | | | | | | | | | | | | | | | | | Accepted: Identifier
+| | | | | | | | | | | | | | | | | | | | | EndValue
+| | | | | | | | | | | | | | | | | | | | | MemberAccess
+| | | | | | | | | | | | | | | | | | | | | | Accepted: Dot
+| | | | | | | | | | | | | | | | | | | | | | Accepted: Identifier
+| | | | | | | | | | | | | | | | | | | | | EndMemberAccess
+| | | | | | | | | | | | | | | | | | | | EndExpression7
+| | | | | | | | | | | | | | | | | | | EndExpression6
+| | | | | | | | | | | | | | | | | | EndExpression5
+| | | | | | | | | | | | | | | | | EndExpression4
+| | | | | | | | | | | | | | | | | Accepted: LessThan
+| | | | | | | | | | | | | | | | | Expression4
+| | | | | | | | | | | | | | | | | | Expression5
+| | | | | | | | | | | | | | | | | | | Expression6
+| | | | | | | | | | | | | | | | | | | | Expression7
+| | | | | | | | | | | | | | | | | | | | | Value
+| | | | | | | | | | | | | | | | | | | | | | Accepted: FloatLiteral
+| | | | | | | | | | | | | | | | | | | | | EndValue
+| | | | | | | | | | | | | | | | | | | | EndExpression7
+| | | | | | | | | | | | | | | | | | | EndExpression6
+| | | | | | | | | | | | | | | | | | EndExpression5
+| | | | | | | | | | | | | | | | | EndExpression4
+| | | | | | | | | | | | | | | | EndExpression3
+| | | | | | | | | | | | | | | EndExpression2
+| | | | | | | | | | | | | | EndExpression1
+| | | | | | | | | | | | | EndExpression
+| | | | | | | | | | | | | Accepted: CloseParentheses
+| | | | | | | | | | | | EndGroupedExpression
+| | | | | | | | | | | | Scope
+| | | | | | | | | | | | | Accepted: OpenCurley
+| | | | | | | | | | | | | Statement
+| | | | | | | | | | | | | | DelimitedStatement
+| | | | | | | | | | | | | | | Expression
+| | | | | | | | | | | | | | | | Expression1
+| | | | | | | | | | | | | | | | | Expression2
+| | | | | | | | | | | | | | | | | | Expression3
+| | | | | | | | | | | | | | | | | | | Expression4
+| | | | | | | | | | | | | | | | | | | | Expression5
+| | | | | | | | | | | | | | | | | | | | | Expression6
+| | | | | | | | | | | | | | | | | | | | | | Expression7
+| | | | | | | | | | | | | | | | | | | | | | | Value
+| | | | | | | | | | | | | | | | | | | | | | | | Accepted: Identifier
+| | | | | | | | | | | | | | | | | | | | | | | EndValue
+| | | | | | | | | | | | | | | | | | | | | | | MemberAccess
+| | | | | | | | | | | | | | | | | | | | | | | | Accepted: Dot
+| | | | | | | | | | | | | | | | | | | | | | | | Accepted: Identifier
+| | | | | | | | | | | | | | | | | | | | | | | EndMemberAccess
+| | | | | | | | | | | | | | | | | | | | | | EndExpression7
+| | | | | | | | | | | | | | | | | | | | | EndExpression6
+| | | | | | | | | | | | | | | | | | | | EndExpression5
+| | | | | | | | | | | | | | | | | | | EndExpression4
+| | | | | | | | | | | | | | | | | | EndExpression3
+| | | | | | | | | | | | | | | | | EndExpression2
+| | | | | | | | | | | | | | | | EndExpression1
+| | | | | | | | | | | | | | | | Accepted: AssignmentPlus
+| | | | | | | | | | | | | | | | Expression
+| | | | | | | | | | | | | | | | | Expression1
+| | | | | | | | | | | | | | | | | | Expression2
+| | | | | | | | | | | | | | | | | | | Expression3
+| | | | | | | | | | | | | | | | | | | | Expression4
+| | | | | | | | | | | | | | | | | | | | | Expression5
+| | | | | | | | | | | | | | | | | | | | | | Expression6
+| | | | | | | | | | | | | | | | | | | | | | | Expression7
+| | | | | | | | | | | | | | | | | | | | | | | | Value
+| | | | | | | | | | | | | | | | | | | | | | | | | Accepted: FloatLiteral
+| | | | | | | | | | | | | | | | | | | | | | | | EndValue
+| | | | | | | | | | | | | | | | | | | | | | | EndExpression7
+| | | | | | | | | | | | | | | | | | | | | | EndExpression6
+| | | | | | | | | | | | | | | | | | | | | | Accepted: Asterisk
+| | | | | | | | | | | | | | | | | | | | | | Expression6
+| | | | | | | | | | | | | | | | | | | | | | | Expression7
+| | | | | | | | | | | | | | | | | | | | | | | | Value
+| | | | | | | | | | | | | | | | | | | | | | | | | Accepted: IntegerLiteral
+| | | | | | | | | | | | | | | | | | | | | | | | EndValue
+| | | | | | | | | | | | | | | | | | | | | | | EndExpression7
+| | | | | | | | | | | | | | | | | | | | | | EndExpression6
+| | | | | | | | | | | | | | | | | | | | | EndExpression5
+| | | | | | | | | | | | | | | | | | | | EndExpression4
+| | | | | | | | | | | | | | | | | | | EndExpression3
+| | | | | | | | | | | | | | | | | | EndExpression2
+| | | | | | | | | | | | | | | | | EndExpression1
+| | | | | | | | | | | | | | | | EndExpression
+| | | | | | | | | | | | | | | EndExpression
+| | | | | | | | | | | | | | EndDelimitedStatement
+| | | | | | | | | | | | | | Accepted: Semicolon
+| | | | | | | | | | | | | EndStatement
+| | | | | | | | | | | | | Statement
+| | | | | | | | | | | | | | FreeStatement
+| | | | | | | | | | | | | | | If
+| | | | | | | | | | | | | | | | Accepted: If
+| | | | | | | | | | | | | | | | GroupedExpression
+| | | | | | | | | | | | | | | | | Accepted: OpenParentheses
+| | | | | | | | | | | | | | | | | Expression
+| | | | | | | | | | | | | | | | | | Expression1
+| | | | | | | | | | | | | | | | | | | Expression2
+| | | | | | | | | | | | | | | | | | | | Expression3
+| | | | | | | | | | | | | | | | | | | | | Expression4
+| | | | | | | | | | | | | | | | | | | | | | Expression5
+| | | | | | | | | | | | | | | | | | | | | | | Expression6
+| | | | | | | | | | | | | | | | | | | | | | | | Expression7
+| | | | | | | | | | | | | | | | | | | | | | | | | Value
+| | | | | | | | | | | | | | | | | | | | | | | | | | Accepted: Identifier
+| | | | | | | | | | | | | | | | | | | | | | | | | EndValue
+| | | | | | | | | | | | | | | | | | | | | | | | | MemberAccess
+| | | | | | | | | | | | | | | | | | | | | | | | | | Accepted: Dot
+| | | | | | | | | | | | | | | | | | | | | | | | | | Accepted: Identifier
+| | | | | | | | | | | | | | | | | | | | | | | | | EndMemberAccess
+| | | | | | | | | | | | | | | | | | | | | | | | | Cast
+| | | | | | | | | | | | | | | | | | | | | | | | | | Accepted: As
+| | | | | | | | | | | | | | | | | | | | | | | | | | Type
+| | | | | | | | | | | | | | | | | | | | | | | | | | | Accepted: Identifier
+| | | | | | | | | | | | | | | | | | | | | | | | | | EndType
+| | | | | | | | | | | | | | | | | | | | | | | | | EndCast
+| | | | | | | | | | | | | | | | | | | | | | | | EndExpression7
+| | | | | | | | | | | | | | | | | | | | | | | EndExpression6
+| | | | | | | | | | | | | | | | | | | | | | | Accepted: Modulo
+| | | | | | | | | | | | | | | | | | | | | | | Expression6
+| | | | | | | | | | | | | | | | | | | | | | | | Expression7
+| | | | | | | | | | | | | | | | | | | | | | | | | Value
+| | | | | | | | | | | | | | | | | | | | | | | | | | Accepted: IntegerLiteral
+| | | | | | | | | | | | | | | | | | | | | | | | | EndValue
+| | | | | | | | | | | | | | | | | | | | | | | | EndExpression7
+| | | | | | | | | | | | | | | | | | | | | | | EndExpression6
+| | | | | | | | | | | | | | | | | | | | | | EndExpression5
+| | | | | | | | | | | | | | | | | | | | | EndExpression4
+| | | | | | | | | | | | | | | | | | | | | Accepted: Equality
+| | | | | | | | | | | | | | | | | | | | | Expression4
+| | | | | | | | | | | | | | | | | | | | | | Expression5
+| | | | | | | | | | | | | | | | | | | | | | | Expression6
+| | | | | | | | | | | | | | | | | | | | | | | | Expression7
+| | | | | | | | | | | | | | | | | | | | | | | | | Value
+| | | | | | | | | | | | | | | | | | | | | | | | | | Accepted: IntegerLiteral
+| | | | | | | | | | | | | | | | | | | | | | | | | EndValue
+| | | | | | | | | | | | | | | | | | | | | | | | EndExpression7
+| | | | | | | | | | | | | | | | | | | | | | | EndExpression6
+| | | | | | | | | | | | | | | | | | | | | | EndExpression5
+| | | | | | | | | | | | | | | | | | | | | EndExpression4
+| | | | | | | | | | | | | | | | | | | | EndExpression3
+| | | | | | | | | | | | | | | | | | | EndExpression2
+| | | | | | | | | | | | | | | | | | EndExpression1
+| | | | | | | | | | | | | | | | | EndExpression
+| | | | | | | | | | | | | | | | | Accepted: CloseParentheses
+| | | | | | | | | | | | | | | | EndGroupedExpression
+| | | | | | | | | | | | | | | | Scope
+| | | | | | | | | | | | | | | | | Accepted: OpenCurley
+| | | | | | | | | | | | | | | | | Statement
+| | | | | | | | | | | | | | | | | | DelimitedStatement
+| | | | | | | | | | | | | | | | | | | Accepted: Continue
+| | | | | | | | | | | | | | | | | | EndDelimitedStatement
+| | | | | | | | | | | | | | | | | | Accepted: Semicolon
+| | | | | | | | | | | | | | | | | EndStatement
+| | | | | | | | | | | | | | | | | Accepted: CloseCurley
+| | | | | | | | | | | | | | | | EndScope
+| | | | | | | | | | | | | | | EndIf
+| | | | | | | | | | | | | | EndFreeStatement
+| | | | | | | | | | | | | EndStatement
+| | | | | | | | | | | | | Statement
+| | | | | | | | | | | | | | DelimitedStatement
+| | | | | | | | | | | | | | | Expression
+| | | | | | | | | | | | | | | | Expression1
+| | | | | | | | | | | | | | | | | Expression2
+| | | | | | | | | | | | | | | | | | Expression3
+| | | | | | | | | | | | | | | | | | | Expression4
+| | | | | | | | | | | | | | | | | | | | Expression5
+| | | | | | | | | | | | | | | | | | | | | Expression6
+| | | | | | | | | | | | | | | | | | | | | | Expression7
+| | | | | | | | | | | | | | | | | | | | | | | Value
+| | | | | | | | | | | | | | | | | | | | | | | | Accepted: Identifier
+| | | | | | | | | | | | | | | | | | | | | | | EndValue
+| | | | | | | | | | | | | | | | | | | | | | | MemberAccess
+| | | | | | | | | | | | | | | | | | | | | | | | Accepted: Dot
+| | | | | | | | | | | | | | | | | | | | | | | | Accepted: Identifier
+| | | | | | | | | | | | | | | | | | | | | | | EndMemberAccess
+| | | | | | | | | | | | | | | | | | | | | | EndExpression7
+| | | | | | | | | | | | | | | | | | | | | EndExpression6
+| | | | | | | | | | | | | | | | | | | | EndExpression5
+| | | | | | | | | | | | | | | | | | | EndExpression4
+| | | | | | | | | | | | | | | | | | EndExpression3
+| | | | | | | | | | | | | | | | | EndExpression2
+| | | | | | | | | | | | | | | | EndExpression1
+| | | | | | | | | | | | | | | | Accepted: AssignmentMultiply
+| | | | | | | | | | | | | | | | Expression
+| | | | | | | | | | | | | | | | | Expression1
+| | | | | | | | | | | | | | | | | | Expression2
+| | | | | | | | | | | | | | | | | | | Expression3
+| | | | | | | | | | | | | | | | | | | | Expression4
+| | | | | | | | | | | | | | | | | | | | | Expression5
+| | | | | | | | | | | | | | | | | | | | | | Expression6
+| | | | | | | | | | | | | | | | | | | | | | | Expression7
+| | | | | | | | | | | | | | | | | | | | | | | | Value
+| | | | | | | | | | | | | | | | | | | | | | | | | Accepted: FloatLiteral
+| | | | | | | | | | | | | | | | | | | | | | | | EndValue
+| | | | | | | | | | | | | | | | | | | | | | | EndExpression7
+| | | | | | | | | | | | | | | | | | | | | | EndExpression6
+| | | | | | | | | | | | | | | | | | | | | EndExpression5
+| | | | | | | | | | | | | | | | | | | | EndExpression4
+| | | | | | | | | | | | | | | | | | | EndExpression3
+| | | | | | | | | | | | | | | | | | EndExpression2
+| | | | | | | | | | | | | | | | | EndExpression1
+| | | | | | | | | | | | | | | | EndExpression
+| | | | | | | | | | | | | | | EndExpression
+| | | | | | | | | | | | | | EndDelimitedStatement
+| | | | | | | | | | | | | | Accepted: Semicolon
+| | | | | | | | | | | | | EndStatement
+| | | | | | | | | | | | | Statement
+| | | | | | | | | | | | | | FreeStatement
+| | | | | | | | | | | | | | | If
+| | | | | | | | | | | | | | | | Accepted: If
+| | | | | | | | | | | | | | | | GroupedExpression
+| | | | | | | | | | | | | | | | | Accepted: OpenParentheses
+| | | | | | | | | | | | | | | | | Expression
+| | | | | | | | | | | | | | | | | | Expression1
+| | | | | | | | | | | | | | | | | | | Expression2
+| | | | | | | | | | | | | | | | | | | | Expression3
+| | | | | | | | | | | | | | | | | | | | | Expression4
+| | | | | | | | | | | | | | | | | | | | | | Expression5
+| | | | | | | | | | | | | | | | | | | | | | | Expression6
+| | | | | | | | | | | | | | | | | | | | | | | | Expression7
+| | | | | | | | | | | | | | | | | | | | | | | | | Value
+| | | | | | | | | | | | | | | | | | | | | | | | | | Accepted: Identifier
+| | | | | | | | | | | | | | | | | | | | | | | | | EndValue
+| | | | | | | | | | | | | | | | | | | | | | | | | MemberAccess
+| | | | | | | | | | | | | | | | | | | | | | | | | | Accepted: Dot
+| | | | | | | | | | | | | | | | | | | | | | | | | | Accepted: Identifier
+| | | | | | | | | | | | | | | | | | | | | | | | | EndMemberAccess
+| | | | | | | | | | | | | | | | | | | | | | | | EndExpression7
+| | | | | | | | | | | | | | | | | | | | | | | EndExpression6
+| | | | | | | | | | | | | | | | | | | | | | EndExpression5
+| | | | | | | | | | | | | | | | | | | | | EndExpression4
+| | | | | | | | | | | | | | | | | | | | | Accepted: GreaterThan
+| | | | | | | | | | | | | | | | | | | | | Expression4
+| | | | | | | | | | | | | | | | | | | | | | Expression5
+| | | | | | | | | | | | | | | | | | | | | | | Expression6
+| | | | | | | | | | | | | | | | | | | | | | | | Expression7
+| | | | | | | | | | | | | | | | | | | | | | | | | Value
+| | | | | | | | | | | | | | | | | | | | | | | | | | Accepted: FloatLiteral
+| | | | | | | | | | | | | | | | | | | | | | | | | EndValue
+| | | | | | | | | | | | | | | | | | | | | | | | EndExpression7
+| | | | | | | | | | | | | | | | | | | | | | | EndExpression6
+| | | | | | | | | | | | | | | | | | | | | | EndExpression5
+| | | | | | | | | | | | | | | | | | | | | EndExpression4
+| | | | | | | | | | | | | | | | | | | | EndExpression3
+| | | | | | | | | | | | | | | | | | | EndExpression2
+| | | | | | | | | | | | | | | | | | EndExpression1
+| | | | | | | | | | | | | | | | | EndExpression
+| | | | | | | | | | | | | | | | | Accepted: CloseParentheses
+| | | | | | | | | | | | | | | | EndGroupedExpression
+| | | | | | | | | | | | | | | | Scope
+| | | | | | | | | | | | | | | | | Accepted: OpenCurley
+| | | | | | | | | | | | | | | | | Statement
+| | | | | | | | | | | | | | | | | | DelimitedStatement
+| | | | | | | | | | | | | | | | | | | Accepted: Break
+| | | | | | | | | | | | | | | | | | EndDelimitedStatement
+| | | | | | | | | | | | | | | | | | Accepted: Semicolon
+| | | | | | | | | | | | | | | | | EndStatement
+| | | | | | | | | | | | | | | | | Accepted: CloseCurley
+| | | | | | | | | | | | | | | | EndScope
+| | | | | | | | | | | | | | | EndIf
+| | | | | | | | | | | | | | EndFreeStatement
+| | | | | | | | | | | | | EndStatement
+| | | | | | | | | | | | | Accepted: CloseCurley
+| | | | | | | | | | | | EndScope
+| | | | | | | | | | | EndWhile
+| | | | | | | | | | EndFreeStatement
+| | | | | | | | | EndStatement
+| | | | | | | | | Statement
+| | | | | | | | | | DelimitedStatement
+| | | | | | | | | | | Return
+| | | | | | | | | | | | Accepted: Return
+| | | | | | | | | | | | Expression
+| | | | | | | | | | | | | Expression1
+| | | | | | | | | | | | | | Expression2
+| | | | | | | | | | | | | | | Expression3
+| | | | | | | | | | | | | | | | Expression4
+| | | | | | | | | | | | | | | | | Expression5
+| | | | | | | | | | | | | | | | | | Expression6
+| | | | | | | | | | | | | | | | | | | Expression7
+| | | | | | | | | | | | | | | | | | | | Value
+| | | | | | | | | | | | | | | | | | | | | Accepted: False
+| | | | | | | | | | | | | | | | | | | | EndValue
+| | | | | | | | | | | | | | | | | | | EndExpression7
+| | | | | | | | | | | | | | | | | | EndExpression6
+| | | | | | | | | | | | | | | | | EndExpression5
+| | | | | | | | | | | | | | | | EndExpression4
+| | | | | | | | | | | | | | | EndExpression3
+| | | | | | | | | | | | | | EndExpression2
+| | | | | | | | | | | | | EndExpression1
+| | | | | | | | | | | | EndExpression
+| | | | | | | | | | | EndReturn
+| | | | | | | | | | EndDelimitedStatement
+| | | | | | | | | | Accepted: Semicolon
+| | | | | | | | | EndStatement
+| | | | | | | | | Accepted: CloseCurley
+| | | | | | | | EndScope
+| | | | | | | EndElse
+| | | | | | EndIf
+| | | | | EndFreeStatement
+| | | | EndStatement
+| | | | Statement
+| | | | | DelimitedStatement
+| | | | | | Label
+| | | | | | | Accepted: Label
+| | | | | | | Accepted: Identifier
+| | | | | | EndLabel
+| | | | | EndDelimitedStatement
+| | | | | Accepted: Semicolon
+| | | | EndStatement
+| | | | Statement
+| | | | | DelimitedStatement
+| | | | | | Return
+| | | | | | | Accepted: Return
+| | | | | | | Expression
+| | | | | | | | Expression1
+| | | | | | | | | Expression2
+| | | | | | | | | | Expression3
+| | | | | | | | | | | Expression4
+| | | | | | | | | | | | Expression5
+| | | | | | | | | | | | | Expression6
+| | | | | | | | | | | | | | Expression7
+| | | | | | | | | | | | | | | Value
+| | | | | | | | | | | | | | | | Accepted: True
+| | | | | | | | | | | | | | | EndValue
+| | | | | | | | | | | | | | EndExpression7
+| | | | | | | | | | | | | EndExpression6
+| | | | | | | | | | | | EndExpression5
+| | | | | | | | | | | EndExpression4
+| | | | | | | | | | EndExpression3
+| | | | | | | | | EndExpression2
+| | | | | | | | EndExpression1
+| | | | | | | EndExpression
+| | | | | | EndReturn
+| | | | | EndDelimitedStatement
+| | | | | Accepted: Semicolon
+| | | | EndStatement
+| | | | Accepted: CloseCurley
+| | | EndScope
+| | EndFunction
+| | Function
+| | | Accepted: Function
+| | | Accepted: Identifier
+| | | Accepted: OpenParentheses
+| | | Accepted: CloseParentheses
+| | | Scope
+| | | | Accepted: OpenCurley
+| | | | Accepted: CloseCurley
+| | | EndScope
+| | EndFunction
+| | Accepted: CloseCurley
+| EndClass
+EndBlock
+
+Parsing Successful
+
+BlockNode
+| ClassNode(Player)
+| | VariableNode(Lives)
+| | | TypeNode(Integer,0)
+| | | BinaryOperatorNode(+)
+| | | | BinaryOperatorNode(*)
+| | | | | ValueNode(9)
+| | | | | ValueNode(1)
+| | | | ValueNode(0)
+| | VariableNode(Health)
+| | | TypeNode(Float,0)
+| | | ValueNode(100.0f)
+| | FunctionNode(ApplyDamage)
+| | | ParameterNode(amount)
+| | | | TypeNode(Float,0)
+| | | TypeNode(Boolean,0)
+| | | ScopeNode
+| | | | BinaryOperatorNode(-=)
+| | | | | MemberAccessNode(.,Health)
+| | | | | | ValueNode(this)
+| | | | | ValueNode(amount)
+| | | | IfNode
+| | | | | BinaryOperatorNode(<=)
+| | | | | | MemberAccessNode(.,Health)
+| | | | | | | ValueNode(this)
+| | | | | | ValueNode(0.0f)
+| | | | | ScopeNode
+| | | | | | UnaryOperatorNode(--)
+| | | | | | | MemberAccessNode(.,Lives)
+| | | | | | | | ValueNode(this)
+| | | | | | BinaryOperatorNode(=)
+| | | | | | | MemberAccessNode(.,Health)
+| | | | | | | | ValueNode(this)
+| | | | | | | ValueNode(100.0f)
+| | | | | | CallNode
+| | | | | | | MemberAccessNode(.,SendDeathEvent)
+| | | | | | | | ValueNode(this)
+| | | | | | GotoNode(End)
+| | | | | IfNode
+| | | | | | ScopeNode
+| | | | | | | WhileNode
+| | | | | | | | BinaryOperatorNode(<)
+| | | | | | | | | MemberAccessNode(.,Health)
+| | | | | | | | | | ValueNode(this)
+| | | | | | | | | ValueNode(50.0f)
+| | | | | | | | ScopeNode
+| | | | | | | | | BinaryOperatorNode(+=)
+| | | | | | | | | | MemberAccessNode(.,Health)
+| | | | | | | | | | | ValueNode(this)
+| | | | | | | | | | BinaryOperatorNode(*)
+| | | | | | | | | | | ValueNode(1.0f)
+| | | | | | | | | | | ValueNode(2)
+| | | | | | | | | IfNode
+| | | | | | | | | | BinaryOperatorNode(==)
+| | | | | | | | | | | BinaryOperatorNode(%)
+| | | | | | | | | | | | CastNode
+| | | | | | | | | | | | | MemberAccessNode(.,Health)
+| | | | | | | | | | | | | | ValueNode(this)
+| | | | | | | | | | | | | TypeNode(Integer,0)
+| | | | | | | | | | | | ValueNode(2)
+| | | | | | | | | | | ValueNode(0)
+| | | | | | | | | | ScopeNode
+| | | | | | | | | | | ContinueNode
+| | | | | | | | | BinaryOperatorNode(*=)
+| | | | | | | | | | MemberAccessNode(.,Health)
+| | | | | | | | | | | ValueNode(this)
+| | | | | | | | | | ValueNode(1.1f)
+| | | | | | | | | IfNode
+| | | | | | | | | | BinaryOperatorNode(>)
+| | | | | | | | | | | MemberAccessNode(.,Health)
+| | | | | | | | | | | | ValueNode(this)
+| | | | | | | | | | | ValueNode(30.0f)
+| | | | | | | | | | ScopeNode
+| | | | | | | | | | | BreakNode
+| | | | | | | ReturnNode
+| | | | | | | | ValueNode(false)
+| | | | LabelNode(End)
+| | | | ReturnNode
+| | | | | ValueNode(true)
+| | FunctionNode(SendDeathEvent)
+| | | ScopeNode
+*******************************************
+
+************** PART 3 TEST 18 **************
+Token: '5' of type 2 (IntegerLiteral)
+Token: ' ' of type 6 (Whitespace)
+Token: '+' of type 39 (Plus)
+Token: ' ' of type 6 (Whitespace)
+Expression
+| Expression1
+| | Expression2
+| | | Expression3
+| | | | Expression4
+| | | | | Expression5
+| | | | | | Expression6
+| | | | | | | Expression7
+| | | | | | | | Value
+| | | | | | | | | Accepted: IntegerLiteral
+| | | | | | | | EndValue
+| | | | | | | EndExpression7
+| | | | | | EndExpression6
+| | | | | EndExpression5
+| | | | | Accepted: Plus
+| | | | EndExpression4*
+| | | EndExpression3*
+| | EndExpression2*
+| EndExpression1*
+EndExpression*
+
+Parsing Failed (Exception)
+*******************************************
+
+************** PART 3 TEST 19 **************
+Token: 'var' of type 152 (Var)
+Token: ' ' of type 6 (Whitespace)
+Token: 'gCount' of type 1 (Identifier)
+Token: ' ' of type 6 (Whitespace)
+Token: ':' of type 17 (Colon)
+Token: ' ' of type 6 (Whitespace)
+Token: 'Integer' of type 1 (Identifier)
+Token: ' ' of type 6 (Whitespace)
+Token: '=' of type 23 (Assignment)
+Token: ' ' of type 6 (Whitespace)
+Token: '(' of type 12 (OpenParentheses)
+Token: 'a' of type 1 (Identifier)
+Token: ' ' of type 6 (Whitespace)
+Token: '+' of type 39 (Plus)
+Token: ' ' of type 6 (Whitespace)
+Token: 'b' of type 1 (Identifier)
+Token: ' ' of type 6 (Whitespace)
+Token: '*' of type 41 (Asterisk)
+Token: ' ' of type 6 (Whitespace)
+Token: '9' of type 2 (IntegerLiteral)
+Block
+| Var
+| | Accepted: Var
+| | Accepted: Identifier
+| | SpecifiedType
+| | | Accepted: Colon
+| | | Type
+| | | | Accepted: Identifier
+| | | EndType
+| | EndSpecifiedType
+| | Accepted: Assignment
+| | Expression
+| | | Expression1
+| | | | Expression2
+| | | | | Expression3
+| | | | | | Expression4
+| | | | | | | Expression5
+| | | | | | | | Expression6
+| | | | | | | | | Expression7
+| | | | | | | | | | Value
+| | | | | | | | | | | GroupedExpression
+| | | | | | | | | | | | Accepted: OpenParentheses
+| | | | | | | | | | | | Expression
+| | | | | | | | | | | | | Expression1
+| | | | | | | | | | | | | | Expression2
+| | | | | | | | | | | | | | | Expression3
+| | | | | | | | | | | | | | | | Expression4
+| | | | | | | | | | | | | | | | | Expression5
+| | | | | | | | | | | | | | | | | | Expression6
+| | | | | | | | | | | | | | | | | | | Expression7
+| | | | | | | | | | | | | | | | | | | | Value
+| | | | | | | | | | | | | | | | | | | | | Accepted: Identifier
+| | | | | | | | | | | | | | | | | | | | EndValue
+| | | | | | | | | | | | | | | | | | | EndExpression7
+| | | | | | | | | | | | | | | | | | EndExpression6
+| | | | | | | | | | | | | | | | | EndExpression5
+| | | | | | | | | | | | | | | | | Accepted: Plus
+| | | | | | | | | | | | | | | | | Expression5
+| | | | | | | | | | | | | | | | | | Expression6
+| | | | | | | | | | | | | | | | | | | Expression7
+| | | | | | | | | | | | | | | | | | | | Value
+| | | | | | | | | | | | | | | | | | | | | Accepted: Identifier
+| | | | | | | | | | | | | | | | | | | | EndValue
+| | | | | | | | | | | | | | | | | | | EndExpression7
+| | | | | | | | | | | | | | | | | | EndExpression6
+| | | | | | | | | | | | | | | | | | Accepted: Asterisk
+| | | | | | | | | | | | | | | | | | Expression6
+| | | | | | | | | | | | | | | | | | | Expression7
+| | | | | | | | | | | | | | | | | | | | Value
+| | | | | | | | | | | | | | | | | | | | | Accepted: IntegerLiteral
+| | | | | | | | | | | | | | | | | | | | EndValue
+| | | | | | | | | | | | | | | | | | | EndExpression7
+| | | | | | | | | | | | | | | | | | EndExpression6
+| | | | | | | | | | | | | | | | | EndExpression5
+| | | | | | | | | | | | | | | | EndExpression4
+| | | | | | | | | | | | | | | EndExpression3
+| | | | | | | | | | | | | | EndExpression2
+| | | | | | | | | | | | | EndExpression1
+| | | | | | | | | | | | EndExpression
+| | | | | | | | | | | EndGroupedExpression*
+| | | | | | | | | | EndValue*
+| | | | | | | | | EndExpression7*
+| | | | | | | | EndExpression6*
+| | | | | | | EndExpression5*
+| | | | | | EndExpression4*
+| | | | | EndExpression3*
+| | | | EndExpression2*
+| | | EndExpression1*
+| | EndExpression*
+| EndVar*
+EndBlock*
+
+Parsing Failed (Exception)
+*******************************************
+
+************** PART 3 TEST 20 **************
+Token: 'function' of type 96 (Function)
+Token: ' ' of type 6 (Whitespace)
+Token: 'Explode' of type 1 (Identifier)
+Token: '(' of type 12 (OpenParentheses)
+Token: ')' of type 13 (CloseParentheses)
+Token: ' ' of type 6 (Whitespace)
+Token: '{' of type 10 (OpenCurley)
+Token: ' ' of type 6 (Whitespace)
+Token: 'if' of type 100 (If)
+Token: ' ' of type 6 (Whitespace)
+Token: '(' of type 12 (OpenParentheses)
+Token: 'a' of type 1 (Identifier)
+Token: ' ' of type 6 (Whitespace)
+Token: '>' of type 26 (GreaterThan)
+Token: ' ' of type 6 (Whitespace)
+Token: '5' of type 2 (IntegerLiteral)
+Token: ')' of type 13 (CloseParentheses)
+Token: ' ' of type 6 (Whitespace)
+Token: '{' of type 10 (OpenCurley)
+Token: ' ' of type 6 (Whitespace)
+Token: '}' of type 11 (CloseCurley)
+Token: ' ' of type 6 (Whitespace)
+Token: 'else' of type 84 (Else)
+Token: ' ' of type 6 (Whitespace)
+Token: '}' of type 11 (CloseCurley)
+Block
+| Function
+| | Accepted: Function
+| | Accepted: Identifier
+| | Accepted: OpenParentheses
+| | Accepted: CloseParentheses
+| | Scope
+| | | Accepted: OpenCurley
+| | | Statement
+| | | | FreeStatement
+| | | | | If
+| | | | | | Accepted: If
+| | | | | | GroupedExpression
+| | | | | | | Accepted: OpenParentheses
+| | | | | | | Expression
+| | | | | | | | Expression1
+| | | | | | | | | Expression2
+| | | | | | | | | | Expression3
+| | | | | | | | | | | Expression4
+| | | | | | | | | | | | Expression5
+| | | | | | | | | | | | | Expression6
+| | | | | | | | | | | | | | Expression7
+| | | | | | | | | | | | | | | Value
+| | | | | | | | | | | | | | | | Accepted: Identifier
+| | | | | | | | | | | | | | | EndValue
+| | | | | | | | | | | | | | EndExpression7
+| | | | | | | | | | | | | EndExpression6
+| | | | | | | | | | | | EndExpression5
+| | | | | | | | | | | EndExpression4
+| | | | | | | | | | | Accepted: GreaterThan
+| | | | | | | | | | | Expression4
+| | | | | | | | | | | | Expression5
+| | | | | | | | | | | | | Expression6
+| | | | | | | | | | | | | | Expression7
+| | | | | | | | | | | | | | | Value
+| | | | | | | | | | | | | | | | Accepted: IntegerLiteral
+| | | | | | | | | | | | | | | EndValue
+| | | | | | | | | | | | | | EndExpression7
+| | | | | | | | | | | | | EndExpression6
+| | | | | | | | | | | | EndExpression5
+| | | | | | | | | | | EndExpression4
+| | | | | | | | | | EndExpression3
+| | | | | | | | | EndExpression2
+| | | | | | | | EndExpression1
+| | | | | | | EndExpression
+| | | | | | | Accepted: CloseParentheses
+| | | | | | EndGroupedExpression
+| | | | | | Scope
+| | | | | | | Accepted: OpenCurley
+| | | | | | | Accepted: CloseCurley
+| | | | | | EndScope
+| | | | | | Else
+| | | | | | | Accepted: Else
+| | | | | | EndElse*
+| | | | | EndIf*
+| | | | EndFreeStatement*
+| | | EndStatement*
+| | EndScope*
+| EndFunction*
+EndBlock*
+
+Parsing Failed (Exception)
+*******************************************
+
+Press enter/return to exit...

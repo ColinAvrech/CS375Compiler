@@ -1,0 +1,437 @@
+************** PART 3 TEST 14 **************
+Token: 'class' of type 70 (Class)
+Token: ' ' of type 6 (Whitespace)
+Token: 'Player' of type 1 (Identifier)
+Token: ' ' of type 6 (Whitespace)
+Token: '{' of type 10 (OpenCurley)
+Token: ' ' of type 6 (Whitespace)
+Token: 'function' of type 96 (Function)
+Token: ' ' of type 6 (Whitespace)
+Token: 'Speak' of type 1 (Identifier)
+Token: '(' of type 12 (OpenParentheses)
+Token: 'volume' of type 1 (Identifier)
+Token: ' ' of type 6 (Whitespace)
+Token: ':' of type 17 (Colon)
+Token: ' ' of type 6 (Whitespace)
+Token: 'Float' of type 1 (Identifier)
+Token: ')' of type 13 (CloseParentheses)
+Token: ' ' of type 6 (Whitespace)
+Token: '{' of type 10 (OpenCurley)
+Token: ' ' of type 6 (Whitespace)
+Token: '}' of type 11 (CloseCurley)
+Token: ' ' of type 6 (Whitespace)
+Token: '}' of type 11 (CloseCurley)
+Token: ' ' of type 6 (Whitespace)
+Token: 'function' of type 96 (Function)
+Token: ' ' of type 6 (Whitespace)
+Token: 'ABC' of type 1 (Identifier)
+Token: '(' of type 12 (OpenParentheses)
+Token: 'a' of type 1 (Identifier)
+Token: ' ' of type 6 (Whitespace)
+Token: ':' of type 17 (Colon)
+Token: ' ' of type 6 (Whitespace)
+Token: 'Integer' of type 1 (Identifier)
+Token: ',' of type 18 (Comma)
+Token: ' ' of type 6 (Whitespace)
+Token: 'b' of type 1 (Identifier)
+Token: ' ' of type 6 (Whitespace)
+Token: ':' of type 17 (Colon)
+Token: ' ' of type 6 (Whitespace)
+Token: 'Float' of type 1 (Identifier)
+Token: ',' of type 18 (Comma)
+Token: ' ' of type 6 (Whitespace)
+Token: 'c' of type 1 (Identifier)
+Token: ' ' of type 6 (Whitespace)
+Token: ':' of type 17 (Colon)
+Token: ' ' of type 6 (Whitespace)
+Token: 'Byte' of type 1 (Identifier)
+Token: '*' of type 41 (Asterisk)
+Token: ')' of type 13 (CloseParentheses)
+Token: ' ' of type 6 (Whitespace)
+Token: ':' of type 17 (Colon)
+Token: ' ' of type 6 (Whitespace)
+Token: 'Byte' of type 1 (Identifier)
+Token: ' ' of type 6 (Whitespace)
+Token: '{' of type 10 (OpenCurley)
+Token: ' ' of type 6 (Whitespace)
+Token: 'return' of type 129 (Return)
+Token: ' ' of type 6 (Whitespace)
+Token: ''\n'' of type 5 (CharacterLiteral)
+Token: ';' of type 16 (Semicolon)
+Token: ' ' of type 6 (Whitespace)
+Token: '}' of type 11 (CloseCurley)
+Token: ' ' of type 6 (Whitespace)
+Token: 'function' of type 96 (Function)
+Token: ' ' of type 6 (Whitespace)
+Token: 'Test' of type 1 (Identifier)
+Token: '(' of type 12 (OpenParentheses)
+Token: ')' of type 13 (CloseParentheses)
+Token: ' ' of type 6 (Whitespace)
+Token: '{' of type 10 (OpenCurley)
+Token: ' ' of type 6 (Whitespace)
+Token: 'var' of type 152 (Var)
+Token: ' ' of type 6 (Whitespace)
+Token: 'c' of type 1 (Identifier)
+Token: ' ' of type 6 (Whitespace)
+Token: ':' of type 17 (Colon)
+Token: ' ' of type 6 (Whitespace)
+Token: 'Byte' of type 1 (Identifier)
+Token: ' ' of type 6 (Whitespace)
+Token: '=' of type 23 (Assignment)
+Token: ' ' of type 6 (Whitespace)
+Token: 'ABC' of type 1 (Identifier)
+Token: '(' of type 12 (OpenParentheses)
+Token: '5' of type 2 (IntegerLiteral)
+Token: ',' of type 18 (Comma)
+Token: ' ' of type 6 (Whitespace)
+Token: '6.0f' of type 3 (FloatLiteral)
+Token: ',' of type 18 (Comma)
+Token: ' ' of type 6 (Whitespace)
+Token: '"hello"' of type 4 (StringLiteral)
+Token: ')' of type 13 (CloseParentheses)
+Token: ';' of type 16 (Semicolon)
+Token: ' ' of type 6 (Whitespace)
+Token: 'var' of type 152 (Var)
+Token: ' ' of type 6 (Whitespace)
+Token: 'player' of type 1 (Identifier)
+Token: ' ' of type 6 (Whitespace)
+Token: ':' of type 17 (Colon)
+Token: ' ' of type 6 (Whitespace)
+Token: 'Player' of type 1 (Identifier)
+Token: ';' of type 16 (Semicolon)
+Token: ' ' of type 6 (Whitespace)
+Token: 'player' of type 1 (Identifier)
+Token: '.' of type 21 (Dot)
+Token: 'Speak' of type 1 (Identifier)
+Token: '(' of type 12 (OpenParentheses)
+Token: '100.0f' of type 3 (FloatLiteral)
+Token: ')' of type 13 (CloseParentheses)
+Token: ';' of type 16 (Semicolon)
+Token: ' ' of type 6 (Whitespace)
+Token: '}' of type 11 (CloseCurley)
+
+Block
+| Class
+| | Accepted: Class
+| | Accepted: Identifier
+| | Accepted: OpenCurley
+| | Function
+| | | Accepted: Function
+| | | Accepted: Identifier
+| | | Accepted: OpenParentheses
+| | | Parameter
+| | | | Accepted: Identifier
+| | | | SpecifiedType
+| | | | | Accepted: Colon
+| | | | | Type
+| | | | | | Accepted: Identifier
+| | | | | EndType
+| | | | EndSpecifiedType
+| | | EndParameter
+| | | Accepted: CloseParentheses
+| | | Scope
+| | | | Accepted: OpenCurley
+| | | | Accepted: CloseCurley
+| | | EndScope
+| | EndFunction
+| | Accepted: CloseCurley
+| EndClass
+| Function
+| | Accepted: Function
+| | Accepted: Identifier
+| | Accepted: OpenParentheses
+| | Parameter
+| | | Accepted: Identifier
+| | | SpecifiedType
+| | | | Accepted: Colon
+| | | | Type
+| | | | | Accepted: Identifier
+| | | | EndType
+| | | EndSpecifiedType
+| | EndParameter
+| | Accepted: Comma
+| | Parameter
+| | | Accepted: Identifier
+| | | SpecifiedType
+| | | | Accepted: Colon
+| | | | Type
+| | | | | Accepted: Identifier
+| | | | EndType
+| | | EndSpecifiedType
+| | EndParameter
+| | Accepted: Comma
+| | Parameter
+| | | Accepted: Identifier
+| | | SpecifiedType
+| | | | Accepted: Colon
+| | | | Type
+| | | | | Accepted: Identifier
+| | | | | Accepted: Asterisk
+| | | | EndType
+| | | EndSpecifiedType
+| | EndParameter
+| | Accepted: CloseParentheses
+| | SpecifiedType
+| | | Accepted: Colon
+| | | Type
+| | | | Accepted: Identifier
+| | | EndType
+| | EndSpecifiedType
+| | Scope
+| | | Accepted: OpenCurley
+| | | Statement
+| | | | DelimitedStatement
+| | | | | Return
+| | | | | | Accepted: Return
+| | | | | | Expression
+| | | | | | | Expression1
+| | | | | | | | Expression2
+| | | | | | | | | Expression3
+| | | | | | | | | | Expression4
+| | | | | | | | | | | Expression5
+| | | | | | | | | | | | Expression6
+| | | | | | | | | | | | | Expression7
+| | | | | | | | | | | | | | Value
+| | | | | | | | | | | | | | | Accepted: CharacterLiteral
+| | | | | | | | | | | | | | EndValue
+| | | | | | | | | | | | | EndExpression7
+| | | | | | | | | | | | EndExpression6
+| | | | | | | | | | | EndExpression5
+| | | | | | | | | | EndExpression4
+| | | | | | | | | EndExpression3
+| | | | | | | | EndExpression2
+| | | | | | | EndExpression1
+| | | | | | EndExpression
+| | | | | EndReturn
+| | | | EndDelimitedStatement
+| | | | Accepted: Semicolon
+| | | EndStatement
+| | | Accepted: CloseCurley
+| | EndScope
+| EndFunction
+| Function
+| | Accepted: Function
+| | Accepted: Identifier
+| | Accepted: OpenParentheses
+| | Accepted: CloseParentheses
+| | Scope
+| | | Accepted: OpenCurley
+| | | Statement
+| | | | DelimitedStatement
+| | | | | Var
+| | | | | | Accepted: Var
+| | | | | | Accepted: Identifier
+| | | | | | SpecifiedType
+| | | | | | | Accepted: Colon
+| | | | | | | Type
+| | | | | | | | Accepted: Identifier
+| | | | | | | EndType
+| | | | | | EndSpecifiedType
+| | | | | | Accepted: Assignment
+| | | | | | Expression
+| | | | | | | Expression1
+| | | | | | | | Expression2
+| | | | | | | | | Expression3
+| | | | | | | | | | Expression4
+| | | | | | | | | | | Expression5
+| | | | | | | | | | | | Expression6
+| | | | | | | | | | | | | Expression7
+| | | | | | | | | | | | | | Value
+| | | | | | | | | | | | | | | Accepted: Identifier
+| | | | | | | | | | | | | | EndValue
+| | | | | | | | | | | | | | Call
+| | | | | | | | | | | | | | | Accepted: OpenParentheses
+| | | | | | | | | | | | | | | Expression
+| | | | | | | | | | | | | | | | Expression1
+| | | | | | | | | | | | | | | | | Expression2
+| | | | | | | | | | | | | | | | | | Expression3
+| | | | | | | | | | | | | | | | | | | Expression4
+| | | | | | | | | | | | | | | | | | | | Expression5
+| | | | | | | | | | | | | | | | | | | | | Expression6
+| | | | | | | | | | | | | | | | | | | | | | Expression7
+| | | | | | | | | | | | | | | | | | | | | | | Value
+| | | | | | | | | | | | | | | | | | | | | | | | Accepted: IntegerLiteral
+| | | | | | | | | | | | | | | | | | | | | | | EndValue
+| | | | | | | | | | | | | | | | | | | | | | EndExpression7
+| | | | | | | | | | | | | | | | | | | | | EndExpression6
+| | | | | | | | | | | | | | | | | | | | EndExpression5
+| | | | | | | | | | | | | | | | | | | EndExpression4
+| | | | | | | | | | | | | | | | | | EndExpression3
+| | | | | | | | | | | | | | | | | EndExpression2
+| | | | | | | | | | | | | | | | EndExpression1
+| | | | | | | | | | | | | | | EndExpression
+| | | | | | | | | | | | | | | Accepted: Comma
+| | | | | | | | | | | | | | | Expression
+| | | | | | | | | | | | | | | | Expression1
+| | | | | | | | | | | | | | | | | Expression2
+| | | | | | | | | | | | | | | | | | Expression3
+| | | | | | | | | | | | | | | | | | | Expression4
+| | | | | | | | | | | | | | | | | | | | Expression5
+| | | | | | | | | | | | | | | | | | | | | Expression6
+| | | | | | | | | | | | | | | | | | | | | | Expression7
+| | | | | | | | | | | | | | | | | | | | | | | Value
+| | | | | | | | | | | | | | | | | | | | | | | | Accepted: FloatLiteral
+| | | | | | | | | | | | | | | | | | | | | | | EndValue
+| | | | | | | | | | | | | | | | | | | | | | EndExpression7
+| | | | | | | | | | | | | | | | | | | | | EndExpression6
+| | | | | | | | | | | | | | | | | | | | EndExpression5
+| | | | | | | | | | | | | | | | | | | EndExpression4
+| | | | | | | | | | | | | | | | | | EndExpression3
+| | | | | | | | | | | | | | | | | EndExpression2
+| | | | | | | | | | | | | | | | EndExpression1
+| | | | | | | | | | | | | | | EndExpression
+| | | | | | | | | | | | | | | Accepted: Comma
+| | | | | | | | | | | | | | | Expression
+| | | | | | | | | | | | | | | | Expression1
+| | | | | | | | | | | | | | | | | Expression2
+| | | | | | | | | | | | | | | | | | Expression3
+| | | | | | | | | | | | | | | | | | | Expression4
+| | | | | | | | | | | | | | | | | | | | Expression5
+| | | | | | | | | | | | | | | | | | | | | Expression6
+| | | | | | | | | | | | | | | | | | | | | | Expression7
+| | | | | | | | | | | | | | | | | | | | | | | Value
+| | | | | | | | | | | | | | | | | | | | | | | | Accepted: StringLiteral
+| | | | | | | | | | | | | | | | | | | | | | | EndValue
+| | | | | | | | | | | | | | | | | | | | | | EndExpression7
+| | | | | | | | | | | | | | | | | | | | | EndExpression6
+| | | | | | | | | | | | | | | | | | | | EndExpression5
+| | | | | | | | | | | | | | | | | | | EndExpression4
+| | | | | | | | | | | | | | | | | | EndExpression3
+| | | | | | | | | | | | | | | | | EndExpression2
+| | | | | | | | | | | | | | | | EndExpression1
+| | | | | | | | | | | | | | | EndExpression
+| | | | | | | | | | | | | | | Accepted: CloseParentheses
+| | | | | | | | | | | | | | EndCall
+| | | | | | | | | | | | | EndExpression7
+| | | | | | | | | | | | EndExpression6
+| | | | | | | | | | | EndExpression5
+| | | | | | | | | | EndExpression4
+| | | | | | | | | EndExpression3
+| | | | | | | | EndExpression2
+| | | | | | | EndExpression1
+| | | | | | EndExpression
+| | | | | EndVar
+| | | | EndDelimitedStatement
+| | | | Accepted: Semicolon
+| | | EndStatement
+| | | Statement
+| | | | DelimitedStatement
+| | | | | Var
+| | | | | | Accepted: Var
+| | | | | | Accepted: Identifier
+| | | | | | SpecifiedType
+| | | | | | | Accepted: Colon
+| | | | | | | Type
+| | | | | | | | Accepted: Identifier
+| | | | | | | EndType
+| | | | | | EndSpecifiedType
+| | | | | EndVar
+| | | | EndDelimitedStatement
+| | | | Accepted: Semicolon
+| | | EndStatement
+| | | Statement
+| | | | DelimitedStatement
+| | | | | Expression
+| | | | | | Expression1
+| | | | | | | Expression2
+| | | | | | | | Expression3
+| | | | | | | | | Expression4
+| | | | | | | | | | Expression5
+| | | | | | | | | | | Expression6
+| | | | | | | | | | | | Expression7
+| | | | | | | | | | | | | Value
+| | | | | | | | | | | | | | Accepted: Identifier
+| | | | | | | | | | | | | EndValue
+| | | | | | | | | | | | | MemberAccess
+| | | | | | | | | | | | | | Accepted: Dot
+| | | | | | | | | | | | | | Accepted: Identifier
+| | | | | | | | | | | | | EndMemberAccess
+| | | | | | | | | | | | | Call
+| | | | | | | | | | | | | | Accepted: OpenParentheses
+| | | | | | | | | | | | | | Expression
+| | | | | | | | | | | | | | | Expression1
+| | | | | | | | | | | | | | | | Expression2
+| | | | | | | | | | | | | | | | | Expression3
+| | | | | | | | | | | | | | | | | | Expression4
+| | | | | | | | | | | | | | | | | | | Expression5
+| | | | | | | | | | | | | | | | | | | | Expression6
+| | | | | | | | | | | | | | | | | | | | | Expression7
+| | | | | | | | | | | | | | | | | | | | | | Value
+| | | | | | | | | | | | | | | | | | | | | | | Accepted: FloatLiteral
+| | | | | | | | | | | | | | | | | | | | | | EndValue
+| | | | | | | | | | | | | | | | | | | | | EndExpression7
+| | | | | | | | | | | | | | | | | | | | EndExpression6
+| | | | | | | | | | | | | | | | | | | EndExpression5
+| | | | | | | | | | | | | | | | | | EndExpression4
+| | | | | | | | | | | | | | | | | EndExpression3
+| | | | | | | | | | | | | | | | EndExpression2
+| | | | | | | | | | | | | | | EndExpression1
+| | | | | | | | | | | | | | EndExpression
+| | | | | | | | | | | | | | Accepted: CloseParentheses
+| | | | | | | | | | | | | EndCall
+| | | | | | | | | | | | EndExpression7
+| | | | | | | | | | | EndExpression6
+| | | | | | | | | | EndExpression5
+| | | | | | | | | EndExpression4
+| | | | | | | | EndExpression3
+| | | | | | | EndExpression2
+| | | | | | EndExpression1
+| | | | | EndExpression
+| | | | EndDelimitedStatement
+| | | | Accepted: Semicolon
+| | | EndStatement
+| | | Accepted: CloseCurley
+| | EndScope
+| EndFunction
+EndBlock
+
+BlockNode
+| ClassNode(Player)
+| | FunctionNode(Speak)
+| | | ParameterNode(volume)
+| | | | TypeNode(Float)
+| | | ScopeNode
+| FunctionNode(ABC)
+| | ParameterNode(a)
+| | | TypeNode(Integer)
+| | ParameterNode(b)
+| | | TypeNode(Float)
+| | ParameterNode(c)
+| | | TypeNode(Byte*)
+| | TypeNode(Byte)
+| | ScopeNode
+| | | ReturnNode
+| | | | ValueNode('\n', Byte)
+| FunctionNode(Test)
+| | ScopeNode
+| | | VariableNode(c)
+| | | | TypeNode(Byte)
+| | | | CallNode(Byte)
+| | | | | ValueNode(ABC, function(Integer, Float, Byte*) : Byte)
+| | | | | ValueNode(5, Integer)
+| | | | | ValueNode(6.0f, Float)
+| | | | | ValueNode("hello", Byte*)
+| | | VariableNode(player)
+| | | | TypeNode(Player)
+| | | CallNode(Void)
+| | | | MemberAccessNode(., Speak, function(Float) : Void)
+| | | | | ValueNode(player, Player)
+| | | | ValueNode(100.0f, Float)
+
+Type(Player)
+| Function(Speak, function(Float) : Void)
+| | Parameter(volume, Float)
+Type(function(Float) : Void)
+Type(Byte*)
+Type(function(Integer, Float, Byte*) : Byte)
+Type(function() : Void)
+Function(ABC, function(Integer, Float, Byte*) : Byte)
+| Parameter(a, Integer)
+| Parameter(b, Float)
+| Parameter(c, Byte*)
+Function(Test, function() : Void)
+| Variable(c, Byte)
+| Variable(player, Player)
+*******************************************
+
+Press enter/return to exit...
